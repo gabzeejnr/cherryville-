@@ -7,9 +7,9 @@ const NAV_LINKS = [
   { label: "Programs",     to: "/programs" },
   { label: "Fellowship",   to: "/fellowship" },
   { label: "Corporate",    to: "/corporate" },
-  { label: "Partnerships", to: "#" },
-  { label: "Insights",     to: "#" },
-  { label: "Contact",      to: "#" },
+  { label: "Partnerships", to: "/partnerships" },
+  { label: "Insights",     to: "/insights" },
+  { label: "Contact",      to: "/contact" },
 ];
 
 export default function SiteNavBar() {

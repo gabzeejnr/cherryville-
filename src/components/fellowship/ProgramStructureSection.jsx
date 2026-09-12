@@ -53,8 +53,8 @@ function PhaseCard({ phase }) {
   return (
     <div className="rounded-2xl p-8" style={{ background: phase.gradient }}>
       <div className="mb-8">{phase.icon}</div>
-      <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
-      <p className="text-xs font-bold tracking-[0.1em] text-gray-400">{phase.subtitle}</p>
+      <h3 className="text-2xl font-extrabold text-white mb-2 tracking-tight">{phase.title}</h3>
+      <p className="text-xs font-extrabold tracking-[0.12em] text-gray-300">{phase.subtitle}</p>
     </div>
   );
 }

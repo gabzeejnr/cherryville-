@@ -5,7 +5,7 @@ import React from "react";
 export default function AboutHero() {
   return (
     <section
-      className="w-full py-24 px-6 text-center relative overflow-hidden"
+      className="w-full py-24 px-6 relative overflow-hidden flex flex-col items-center text-center"
       style={{
         backgroundColor: "#0b2220",
         backgroundImage:

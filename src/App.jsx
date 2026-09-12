@@ -4,6 +4,9 @@ import About from './pages/About'
 import Programs from './pages/Programs'
 import Fellowship from './pages/Fellowship'
 import Corporate from './pages/Corporate'
+import Partnerships from './pages/Partnerships'
+import Insights from './pages/Insights'
+import Contact from './pages/Contact'
 import './App.css'
 
 function App() {
@@ -15,6 +18,9 @@ function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/fellowship" element={<Fellowship />} />
         <Route path="/corporate" element={<Corporate />} />
+        <Route path="/partnerships" element={<Partnerships />} />
+        <Route path="/insights" element={<Insights />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,17 +1,17 @@
 import React from "react";
 
 /**
- * FellowshipHero — Fellowship page top section
+ * PartnershipsHero — Partnerships page top section
  *
- * Content/copy from "The Fellowship Program" design: eyebrow, heading,
- * and the subtext about the intensive learning experience. Visual system
- * carried over from the "Three Platforms. One Mission." hero: dark green
- * gradient background, lime small-caps eyebrow, two-line heading (first
- * line white, second line bold lime) — matching that hero's split
- * heading treatment.
+ * Content/copy from "Grow Impact, Together" design: eyebrow, heading,
+ * and the subtext about collaborating with governments, institutions,
+ * and organizations. Visual system carried over from the "Three
+ * Platforms. One Mission." hero: dark green gradient background, lime
+ * small-caps eyebrow, two-line heading (first line white, second line
+ * bold lime).
  */
 
-export default function FellowshipHero() {
+export default function PartnershipsHero() {
   return (
     <section
       className="w-full py-24 px-6 relative overflow-hidden flex flex-col items-center text-center"
@@ -22,21 +22,21 @@ export default function FellowshipHero() {
       }}
     >
       <p className="text-xs font-bold tracking-[0.2em] text-[#d4f870] mb-6">
-        CAREER ACCELERATOR
+        PARTNER WITH US
       </p>
 
       <h1 className="max-w-3xl mx-auto mb-6 leading-[1.15]">
         <span className="block text-4xl sm:text-5xl md:text-6xl font-normal text-white">
-          The Fellowship
+          Grow Impact,
         </span>
         <span className="block text-4xl sm:text-5xl md:text-6xl font-bold text-[#d4f870]">
-          Program
+          Together
         </span>
       </h1>
 
       <p className="text-base sm:text-lg text-gray-300/90 max-w-xl mx-auto leading-relaxed">
-        An intensive, structured learning experience designed to take you
-        from zero experience to an employable, confident professional.
+        We collaborate with governments, institutions, and organizations
+        to spark growth at scale.
       </p>
     </section>
   );
