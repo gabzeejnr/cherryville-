@@ -1,9 +1,9 @@
 import React from "react";
-import SiteNavBar from "../components/layout/SiteNavBar";
+import SiteNavBar from "../components/SiteNavBar";
 import InsightsHero from "../components/insights/InsightsHero";
 import InsightsCategoriesSection from "../components/insights/InsightsCategoriesSection";
 import FreeResourceSection from "../components/insights/FreeResourceSection";
-import CherryVilleFooter from "../components/layout/CherryVilleFooter";
+import CherryVilleFooter from "../components/CherryVilleFooter";
 
 export default function Insights() {
   return (

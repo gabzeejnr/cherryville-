@@ -1,25 +1,25 @@
-import SiteNavBar from '../components/layout/SiteNavBar'
-import LogoRow from '../components/home/TrustedByMarquee'
-import OurFocusSection from '../components/home/OurFocusSection'
+import Hero from '../components/home/Hero'
+import Marquee from '../components/home/PartnersMarquee'
+import WhatDoWeDo from '../components/home/WhatDoWeDo.tsx'
+import OurFocusSection from '../components/home/OurFocusSection.tsx'
 import PlatformsSection from '../components/shared/ProgramsSection'
 import WhyCherryvilleSection from '../components/home/WhyCherryvilleSection'
 import WhoWeServeSection from '../components/home/WhoWeServeSection'
 import ReadyToGrowSection from '../components/home/ReadyToGrowSection'
-import CherryVilleFooter from '../components/layout/CherryVilleFooter'
-import TechnofocusHero from '../components/home/Herosection'
+import SectorsWeServe from '../components/home/SectorsWeServe.tsx'
 
 export default function Home() {
-  return (
-    <>
-      <SiteNavBar/>
-      <TechnofocusHero/>
-      <LogoRow/>
-      <OurFocusSection/>
-      <PlatformsSection/>
-      <WhyCherryvilleSection/>
-      <WhoWeServeSection/>
-      <ReadyToGrowSection/>
-      <CherryVilleFooter/>
-    </>
-  )
+    return (
+        <>
+            <Hero />
+            <Marquee />
+            <WhatDoWeDo />
+            <SectorsWeServe />
+            <OurFocusSection />
+            <PlatformsSection />
+            <WhyCherryvilleSection />
+            <WhoWeServeSection />
+            <ReadyToGrowSection />
+        </>
+    )
 }
