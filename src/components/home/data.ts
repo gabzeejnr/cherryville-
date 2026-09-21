@@ -41,7 +41,7 @@ const doings: readonly Doings[] = [
             href: "/courses"
         }
     }
-];
+] as const;
 
 const sectorsServed: readonly Serve[] = [
     {
@@ -76,6 +76,8 @@ const sectorsServed: readonly Serve[] = [
             bgColor: "brown"
         }
     }
-]
+] as const;
+
+
 
 export { doings, sectorsServed }

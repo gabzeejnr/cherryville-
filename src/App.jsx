@@ -9,13 +9,15 @@ import Partnerships from './pages/Partnerships'
 import Insights from './pages/Insights'
 import Contact from './pages/Contact'
 import './App.css'
+import EnterpriseTrainng from './pages/EnterpriseTrainng'
 
 export default function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<MainLayout />}>
+                <Route path="/" element={<MainLayout />}>
                     <Route index element={<Home />} />
+                    <Route path="/enterprise-training" element={<EnterpriseTrainng />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/programs" element={<Programs />} />
                     <Route path="/fellowship" element={<Fellowship />} />

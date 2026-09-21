@@ -40,6 +40,7 @@
     --color-brand: #C01F2E;
     --color-brand-hover: #C53342;
     --color-bg: #F5F5F5;
+    --color-cherry: #FDF2E9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -127,4 +128,11 @@ code {
     line-height: 135%;
     padding: 4px 8px;
     background: var(--code-bg);
+}
+
+.gray-subheading {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4A5565;
 }
