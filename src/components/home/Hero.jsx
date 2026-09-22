@@ -1,6 +1,6 @@
 import styles from "./Home.module.scss";
 
-function MainHero() {
+function MainHero({ setIsOpen }) {
     return (
         <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6b9d88]/40 bg-[#163833]/60 backdrop-blur-sm text-[#a5e076] text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
@@ -19,7 +19,7 @@ function MainHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row mt-5 items-center gap-4 w-full sm:w-auto">
-                <button type="button"
+                <button type="button" onClick={() => setIsOpen(prev => !prev)}
                     className="bg-accent px-4 inline-flex items-center justify-center gap-3 py-3 rounded-full cursor-pointer w-full">
                     <span className="min-w-fit">Request a Proposal</span><span>&rarr;</span>
                 </button>
@@ -51,11 +51,11 @@ function Stats() {
     )
 }
 
-export default function Hero() {
+export default function Hero({ setIsOpen }) {
     return (
         <section className={styles.hero}>
             <div className="flex flex-col min-h-screen py-10">
-                <MainHero />
+                <MainHero setIsOpen={setIsOpen} />
                 <div className="mt-auto">
                     <Stats />
                 </div>

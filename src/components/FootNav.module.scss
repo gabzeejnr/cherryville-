@@ -43,6 +43,7 @@
     position: relative;
     width: 1.5rem;
     background: white;
+    transform: translateX(10px);
 
     &::before {
         content: "";
@@ -83,6 +84,6 @@
 @keyframes drop {
     from {
         top: -100%;
-        opacity: .5;
+        opacity: 0;
     }
 }

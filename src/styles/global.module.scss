@@ -1,0 +1,25 @@
+.close-modal {
+    position: relative;
+    background: black;
+    height: 10px;
+
+    &::before {
+        content: "";
+        background: black;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        top: -5px;
+        transform: rotate(43deg) translateY(5px) translateX(7px);
+    }
+
+    &::after {
+        content: "";
+        background: black;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        top: 5px;
+        transform: rotate(-45deg) translateY(0) translateX(3px);
+    }
+}

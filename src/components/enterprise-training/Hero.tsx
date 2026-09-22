@@ -1,6 +1,7 @@
+import type { Dispatch, SetStateAction } from "react";
 import styles from "./Enterprise.module.scss";
 
-export default function Hero() {
+export default function Hero({ setIsOpen }: { setIsOpen:  Dispatch<SetStateAction<boolean>> }) {
     return (
         <section className={styles.hero}>
             <div className="flex flex-col min-h-screen py-10 justify-center items-center">
@@ -14,7 +15,7 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row mt-5 items-center gap-4 w-full sm:w-auto">
-                        <button type="button"
+                        <button type="button" onClick={() => setIsOpen(prev => !prev)}
                             className="bg-accent px-4 inline-flex items-center justify-center gap-3 py-3 rounded-full cursor-pointer w-full">
                             <span className="min-w-fit">Request a Proposal</span><span>&rarr;</span>
                         </button>

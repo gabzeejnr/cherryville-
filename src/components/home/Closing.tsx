@@ -1,4 +1,4 @@
-export default function Closing() {
+export default function Closing({ setIsOpen }: { setIsOpen: any }) {
     return (
         <section className="px-3 md:px-5 py-20 bg-cherry">
             <div className="flex flex-col gap-5">
@@ -8,7 +8,7 @@ export default function Closing() {
                 </p>
             </div>
             <div className="flex items-center justify-center mt-10">
-                <button type="button"
+                <button type="button" onClick={() => setIsOpen(true)}
                     className="bg-accent hover:bg-accent-hover cursor-pointer px-3 py-2 rounded-full text-white font-medium"
                 >Request a Proposal</button>
             </div>
