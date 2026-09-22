@@ -1,7 +1,8 @@
-import { Template } from "./Sectors.types";
+import type { Template } from "./Sectors.types";
 
 const sectors: Template[] = [
     {
+        route: "oil-and-gas",
         heading: {
             text: "Technical capability for the energy sector.",
             highlights: ["technical", "capability", "energy"]
@@ -33,6 +34,7 @@ const sectors: Template[] = [
         engage: "We deliver in-house at your facility, at venues in Lagos, Port Harcourt and Abuja, or virtually. We work directly with operators and regulators, and equally as a delivery partner to contractors and consultancies who require training capability behind an awarded contract. "
     },
     {
+        route: "banking",
         heading: {
             text: "Capability for a sector where accuracy is not optional.",
             highlights: ["capability", "sector", "accuracy", "not", "optional."]
@@ -64,9 +66,10 @@ const sectors: Template[] = [
         engage: "Most institutions run an internal academy, and we work as a specialist supplier into it rather than a replacement for it. We take the technical tracks your in-house faculty is not resourced to cover, deliver them to your calendar, and hand back the assessment data for your own records. "
     },
     {
+        route: "government",
         heading: {
             text: "Digital capability across the public workforce.",
-            highlights: ["capability","public", "workforce."]
+            highlights: ["capability", "public", "workforce."]
         },
         headingText: "Capacity development for ministries, departments, agencies and regulatory bodies delivering services at scale.",
         challenge: "Public institutions are digitising faster than their workforces are being trained. Systems are procured and deployed, but adoption stalls where staff confidence is low. Data that could inform policy sits unanalysed because the skills to interrogate it are concentrated in a handful of officers. Cybersecurity awareness across a large workforce lags behind the exposure that comes with putting services online. The scale of the workforce is itself the obstacle, training a few hundred people is a different exercise from training a few dozen.",
@@ -95,6 +98,7 @@ const sectors: Template[] = [
         engage: "We run concurrent cohorts across multiple cities and venues, with the documentation, attendance records and closure reporting that procurement and audit processes require. Programmes are structured to fit budget cycles and to produce the evidence trail your oversight functions expect."
     },
     {
+        route: "development",
         heading: {
             text: "Skills programmes that produce evidence, not attendance sheets.",
             highlights: ["Skills", "programmes", "evidence,", "attendance"]

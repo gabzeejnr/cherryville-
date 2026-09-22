@@ -10,6 +10,19 @@
     // antialiased selection:bg-[#D4F870] selection:text-slate-900
 }
 
+.typing {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 5s steps(50) forwards;
+
+    @keyframes type {
+        from {
+            width: 0;
+        }
+    }
+}
+
 .marquee-content {
     display: flex;
     animation: scroll-left 20s linear infinite;

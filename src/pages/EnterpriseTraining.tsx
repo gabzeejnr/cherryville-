@@ -7,7 +7,7 @@ import Introduction from "../components/enterprise-training/Intorduction"
 import ServiceLines from "../components/enterprise-training/ServiceLines"
 import RequestAProposal from "../components/forms/RequestAProposal"
 
-export default function EnterpriseTrainng() {
+export default function EnterpriseTraining() {
 
     const [isOpen, setIsOpen] = useState(false);
 

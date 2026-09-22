@@ -1,4 +1,5 @@
 export type Template = {
+    route?: "oil-and-gas" | "banking" | "government" | "development",
     heading: {
         text: string,
         highlights: string[]

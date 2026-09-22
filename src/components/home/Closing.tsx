@@ -1,6 +1,6 @@
 export default function Closing({ setIsOpen }: { setIsOpen: any }) {
     return (
-        <section className="px-3 md:px-5 py-20 bg-cherry">
+        <section className="px-3 md:px-5 py-20 bg-cherry h-screen flex flex-col justify-center-safe">
             <div className="flex flex-col gap-5">
                 <p className="flex justify-center text-3xl font-bold text-center">Tell us what your people need to be able to do.</p>
                 <p className="text-center text-lg font-medium text-gray-600">

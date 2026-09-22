@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { X } from "lucide-react"
 import type { Dispatch, SetStateAction } from "react";
 import styles from "../../styles/global.module.scss";
 
@@ -18,26 +18,18 @@ type Form = {
     message: string
 }
 
-export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
+function Required() {
+    return <span className={styles.required} />
+}
 
-    const [form, setForm] = useState<Form>({
-        name: "",
-        organisation: "",
-        email: "",
-        phone: "",
-        sector: "",
-        services: [""],
-        number: 1,
-        timeframe: "",
-        message: ""
-    })
+export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
 
     async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>): Promise<void> {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
 
-        const thisFormData: any = {
+        const thisFormData: Form = {
             name: formData.get("name") as string,
             organisation: formData.get("organisation") as string,
             email: formData.get("email") as string,
@@ -55,13 +47,14 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
 
     return (
         <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/50 p-4 py-7">
-            <div className="relative w-full max-h-150 overflow-y-auto overflow-x-hidden scrollbar-none max-w-2xl px-4 py-8 border border-gray-200 rounded-xl shadow-sm place-self-center bg-white">
+            <div className="relative w-full max-h-150 overflow-y-auto overflow-x-hidden scrollbar-none max-w-2xl px-4 py-8 border border-gray-200 rounded-xl shadow-sm place-self-center bg-white"
+                data-aos="zoom-in">
                 <div className="mb-8">
                     <h2 className="text-3xl font-semibold text-gray-900">
                         <div className="flex items-center justify-between">
                             Request a Proposal
-                            <button type="button" className="mr-10" onClick={() => setIsOpen(false)}>
-                                <span className={styles["close-modal"]} />
+                            <button type="button" className="mr-10 border rounded-full p-px cursor-pointer" onClick={() => setIsOpen(false)}>
+                                <X />
                             </button>
                         </div>
                     </h2>
@@ -73,9 +66,12 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                 <form onSubmit={handleSubmit} className="space-y-6">
 
                     <div className="space-y-2">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                            Full Name
-                        </label>
+                        <span className="relative block text-sm font-medium text-gray-700">
+                            <label htmlFor="name">
+                                Full Name
+                            </label>
+                            <Required />
+                        </span>
                         <input type="text" name="name" id="name" placeholder="Enter your full name"
                             required className="w-full rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry" />
                     </div>
@@ -95,9 +91,12 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                            Work Email
-                        </label>
+                        <span className="relative block text-sm font-medium text-gray-700">
+                            <label htmlFor="email">
+                                Work Email
+                            </label>
+                            <Required />
+                        </span>
                         <input type="email" name="email" id="email" placeholder="Enter work email" required
                             className="w-full rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry" />
                     </div>
@@ -112,9 +111,12 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="sector" className="block text-sm font-medium text-gray-700">
-                            Sector
-                        </label>
+                        <span className="relative block text-sm font-medium text-gray-700">
+                            <label htmlFor="sector">
+                                Sector
+                            </label>
+                            <Required />
+                        </span>
                         <select name="sector" id="sector" className="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry">
                             <option value="oil-and-gas">Oil & Gas</option>
                             <option value="banking-and-finance">Banking & Financial Services</option>
@@ -164,6 +166,7 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                             name="number"
                             id="number"
                             min="1"
+                            max="50"
                             defaultValue={1}
                             className="w-full rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry"
                         />
@@ -181,10 +184,13 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                     </div>
 
                     <div className="space-y-2">
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                            Message
-                        </label>
-                        <textarea name="message" id="message" rows={5}
+                        <span className="relative block text-sm font-medium text-gray-700">
+                            <label htmlFor="message">
+                                Message
+                            </label>
+                            <Required />
+                        </span>
+                        <textarea name="message" id="message" rows={5} defaultValue="I would like to..."
                             placeholder="Tell us more about what you need..."
                             className="w-full resize-none rounded-md border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry"
                         />
