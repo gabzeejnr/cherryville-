@@ -12,6 +12,7 @@ import Insights from "../pages/Insights";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import { sectors } from "../components/sectors/data";
+import TalentSolutions from "../pages/TalentSolutions";
 
 
 export default function RoutePage() {
@@ -29,6 +30,7 @@ export default function RoutePage() {
                         />)
                     })}
                 </Route>
+                <Route path="talent-solutions" element={<TalentSolutions />} />
                 <Route path="about" element={<About />} />
                 <Route path="programs" element={<Programs />} />
                 <Route path="fellowship" element={<Fellowship />} />
