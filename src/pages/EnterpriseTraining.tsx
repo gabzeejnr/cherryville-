@@ -1,4 +1,5 @@
 import { useState } from "react"
+import useTitle from "../hooks/title.hook";
 import Closing from "../components/enterprise-training/Closing"
 import DeliveryFormat from "../components/enterprise-training/DeliveryFormat"
 import DeliveryStandard from "../components/enterprise-training/DeliveryStandard"
@@ -6,10 +7,14 @@ import Hero from "../components/enterprise-training/Hero"
 import Introduction from "../components/enterprise-training/Intorduction"
 import ServiceLines from "../components/enterprise-training/ServiceLines"
 import RequestAProposal from "../components/forms/RequestAProposal"
+import { useGoToTopOnLoad } from "../hooks/load.hook";
 
 export default function EnterpriseTraining() {
 
     const [isOpen, setIsOpen] = useState(false);
+
+    useTitle("Enterprise Training");
+    useGoToTopOnLoad("enterprise-training");
 
     return (
         <>

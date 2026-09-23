@@ -7,10 +7,15 @@ import HowWeWork from '../components/home/HowWeWork.tsx';
 import AcademyTeaser from '../components/home/AcademyTeaser.tsx';
 import Closing from '../components/home/Closing.tsx';
 import RequestAProposal from '../components/forms/RequestAProposal.tsx';
+import useTitle from '../hooks/title.hook.tsx';
+import { useGoToTopOnLoad } from '../hooks/load.hook.tsx';
 
 export default function Home() {
 
     const [isOpen, setIsOpen] = useState(false);
+
+    useTitle("Home");
+    useGoToTopOnLoad();
 
     return (
         <>

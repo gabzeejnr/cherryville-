@@ -1,8 +1,8 @@
-import { X } from "lucide-react"
+import { X } from "lucide-react";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "../../styles/global.module.scss";
 
-type Sector = | "oil-and-gas" | "banking-and-finance" | "government" | "ngo" | "other" | "";
+type Sector = | "oil-and-gas" | "banking-and-finance" | "government" | "ngo" | "other";
 type Service = | "staff-training" | "curriculum-design" | "assessment-reporting" | "technical-talent" | "partner-delivery" | ""
 type Timeframe = "one-month" | "one-three-months" | "more-than-three-months" | ""
 
@@ -27,22 +27,22 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
     async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>): Promise<void> {
         e.preventDefault();
 
-        const formData = new FormData(e.currentTarget);
+        const form = new FormData(e.currentTarget);
 
-        const thisFormData: Form = {
-            name: formData.get("name") as string,
-            organisation: formData.get("organisation") as string,
-            email: formData.get("email") as string,
-            phone: formData.get("phone") as string,
-            sector: formData.get("sector") as Form["sector"],
-            services: formData.getAll("services") as Form["services"],
-            number: Number(formData.get("number")),
-            timeframe: formData.get("timeframe") as Form["timeframe"],
-            message: formData.get("message") as string
+        const data: Form = {
+            name: form.get("name") as string,
+            organisation: form.get("organisation") as string,
+            email: form.get("email") as string,
+            phone: form.get("phone") as string,
+            sector: form.get("sector") as Form["sector"],
+            services: form.getAll("services") as Form["services"],
+            number: Number(form.get("number")),
+            timeframe: form.get("timeframe") as Form["timeframe"],
+            message: form.get("message") as string
         }
 
-        console.log(thisFormData);
-        alert(`Data stolen successfully...\n\n\nJust kidding, it's not connected to a server\n\n ${Object.entries(thisFormData).map(([key, value]) => (`key: ${key}, value:${value}\n`))}`)
+        console.log(data);
+        alert(`Data stolen successfully...\n\n\nJust kidding, it's not connected to a server\n\n ${Object.entries(data).map(([key, value]) => (`key: ${key}, value:${value}\n`))}`)
     }
 
     return (
@@ -53,7 +53,7 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                     <h2 className="text-3xl font-semibold text-gray-900">
                         <div className="flex items-center justify-between">
                             Request a Proposal
-                            <button type="button" className="mr-10 border rounded-full p-px cursor-pointer" onClick={() => setIsOpen(false)}>
+                            <button type="button" className="mr-1 cursor-pointer" onClick={() => setIsOpen(false)}>
                                 <X />
                             </button>
                         </div>
@@ -118,10 +118,11 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                             <Required />
                         </span>
                         <select name="sector" id="sector" className="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-cherry focus:ring-1 focus:ring-cherry">
-                            <option value="oil-and-gas">Oil & Gas</option>
-                            <option value="banking-and-finance">Banking & Financial Services</option>
-                            <option value="government">Government & Public Sector</option>
-                            <option value="ngo">NGO & Development</option>
+                            <option value="" aria-disabled="true">Choose a Sector</option>
+                            <option value="oil-and-gas">Oil and Gas</option>
+                            <option value="banking-and-finance">Banking and Financial Services</option>
+                            <option value="government">Government and Public Sector</option>
+                            <option value="ngo">NGO and Development</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
