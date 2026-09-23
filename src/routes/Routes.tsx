@@ -24,7 +24,7 @@ export default function RoutePage() {
                     {sectors.map((sec, i) => {
                         const { route, heading, headingText, challenge, engage, help } = sec;
 
-                        return (<Route path={route} element={<SectorTemplate heading={heading} headingText={headingText}
+                        return (<Route path={route} element={<SectorTemplate heading={heading} headingText={headingText} route={route}
                             challenge={challenge} engage={engage} help={help} />} key={`${i}-${route}-${String(i)}`}
                         />)
                     })}

@@ -1,8 +1,9 @@
 import styles from "./Sectors.module.scss";
 
 function HighlightText({ text, highlights }: { text: string, highlights: string[] }) {
+    
     if (!highlights || !highlights.length) return <span>{text}</span>
-
+    
     const parts = text.split(" ");
 
     return (
