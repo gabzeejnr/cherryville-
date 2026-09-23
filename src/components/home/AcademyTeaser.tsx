@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AcademyTeaser() {
     return (
         <section className="px-3 md:px-5 py-20 bg-bg h-screen flex flex-col justify-center-safe">
@@ -11,7 +13,9 @@ export default function AcademyTeaser() {
                 </p>
             </div>
             <div className="flex justify-center mt-10" data-aos="flip-left">
-                <button type="button" className="bg-accent hover:bg-accent-hover text-white px-3 py-2 rounded-full font-medium cursor-pointer">Find your course</button>
+                <button type="button" className="bg-accent hover:bg-accent-hover text-white px-3 py-2 rounded-full font-medium cursor-pointer">
+                    <Link to="/courses">Find your course</Link>
+                </button>
             </div>
         </section>
     )
