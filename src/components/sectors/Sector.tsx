@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import HowWeHelp from "./HowWehelp";
 import type { Template } from "./Sectors.types";
 import { useGoToTopOnLoad } from "../../hooks/load.hook";
+import RequestAProposalButton from "../RequestAProposalButton";
 
 export default function SectorTemplate({
     route,
@@ -31,8 +32,7 @@ export default function SectorTemplate({
             <HowWeHelp help={help} />
             <Engage engage={engage} />
             <div className="flex justify-center-safe">
-                <button type="button" className="bg-accent px-3 py-2 rounded-full cursor-pointer hover:bg-accent-hover"
-                    onClick={() => setIsOpen(p => !p)}>Request a  Proposal</button>
+                <RequestAProposalButton setIsOpen={setIsOpen} />
             </div>
             {isOpen && <RequestAProposal setIsOpen={setIsOpen} />}
         </div>

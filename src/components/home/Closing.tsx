@@ -1,4 +1,7 @@
-export default function Closing({ setIsOpen }: { setIsOpen: any }) {
+import type { Dispatch, SetStateAction } from "react";
+import RequestAProposalButton from "../RequestAProposalButton";
+
+export default function Closing({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (
         <section className="px-3 md:px-5 py-20 bg-cherry h-screen flex flex-col justify-center-safe">
             <div className="flex flex-col gap-5">
@@ -8,9 +11,7 @@ export default function Closing({ setIsOpen }: { setIsOpen: any }) {
                 </p>
             </div>
             <div className="flex items-center justify-center mt-10">
-                <button type="button" onClick={() => setIsOpen(true)}
-                    className="bg-accent hover:bg-accent-hover cursor-pointer px-3 py-2 rounded-full text-white font-medium"
-                >Request a Proposal</button>
+                <RequestAProposalButton setIsOpen={setIsOpen} />
             </div>
         </section>
     )

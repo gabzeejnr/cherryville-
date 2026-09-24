@@ -1,4 +1,4 @@
-import { FourSteps, ServiceLines } from "./talentSolutions.types"
+import type { FourSteps, ServiceLines } from "./talentSolutions.types"
 
 const serviceLines: ServiceLines[] = [
     {
