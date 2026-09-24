@@ -1,4 +1,4 @@
-import { ServiceLines } from "./enterprise.types";
+import type { ServiceLines } from "./enterprise.types";
 
 
 const serviceLines: ServiceLines[] = [
