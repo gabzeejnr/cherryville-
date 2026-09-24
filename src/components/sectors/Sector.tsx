@@ -5,7 +5,7 @@ import Challenge from "./Challenge";
 import Engage from "./Engage";
 import Hero from "./Hero";
 import HowWeHelp from "./HowWehelp";
-import type { Template } from "./Sectors.types";
+import type { Template } from "./sectors.types";
 import { useGoToTopOnLoad } from "../../hooks/load.hook";
 import RequestAProposalButton from "../RequestAProposalButton";
 

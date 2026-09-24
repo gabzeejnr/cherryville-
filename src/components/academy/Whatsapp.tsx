@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Circle } from "lucide-react";
 import whatsapp from "../../assets/SVG/whatsApp.webp";
 
 export default function AcademyWhatsapp({ text }: { text: string }) {

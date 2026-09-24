@@ -1,4 +1,4 @@
-import type { Template } from "./Sectors.types";
+import type { Template } from "./sectors.types";
 
 const sectors: Template[] = [
     {

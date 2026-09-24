@@ -17,7 +17,10 @@ export default function HowWeWork() {
                 </div>
             </div>
             <div className="flex items-center justify-center mt-10" data-aos="flip-right">
-                <Link to="/enterprise-training#delivery-standard">
+                <Link to={{
+                    pathname: "/enterprise-training",
+                    hash: "#delivery-standard"
+                }}>
                     <button type="button" className="bg-accent px-3 py-2 cursor-pointer text-white rounded-full hover:bg-accent-hover">See how we deliver</button></Link>
             </div>
         </section>
