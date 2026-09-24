@@ -13,6 +13,10 @@ import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import { sectors } from "../components/sectors/data";
 import TalentSolutions from "../pages/TalentSolutions";
+import Academy from "../pages/Academy/Academy";
+import Beginner from "../pages/Academy/Beginner";
+import Intermediate from "../pages/Academy/Intermediate";
+import Advanced from "../pages/Academy/Advanced";
 
 
 export default function RoutePage() {
@@ -31,6 +35,12 @@ export default function RoutePage() {
                     })}
                 </Route>
                 <Route path="talent-solutions" element={<TalentSolutions />} />
+                <Route path="academy/">
+                    <Route index element={<Academy />} />
+                    <Route path="beginner" element={<Beginner />} />
+                    <Route path="intermediate" element={<Intermediate />} />
+                    <Route path="advanced" element={<Advanced />} />
+                </Route>
                 <Route path="about" element={<About />} />
                 <Route path="programs" element={<Programs />} />
                 <Route path="fellowship" element={<Fellowship />} />
