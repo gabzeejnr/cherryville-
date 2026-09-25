@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section from "../../Section";
-import { threeLevels } from "../data";
+import { threeLevels } from "../../../data/academy.data";
 
 export default function ThreeLevels() {
     return (

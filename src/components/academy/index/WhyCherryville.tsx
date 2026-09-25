@@ -1,5 +1,5 @@
 import Section from "../../Section";
-import { whyCherryville } from "../data";
+import { whyCherryville } from "../../../data/academy.data";
 
 export default function WhyCherryville() {
     return (

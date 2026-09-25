@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { questions, courses } from "../data";
-import type { AnswerFinder, Course } from "../academy.types";
+import { questions, courses } from "../../../data/academy.data";
+import type { AnswerFinder, Course } from "../../../types/academy.types";
 
 export default function RecommendCourse() {
 
-    const [submitted, setSubmitted] = useState(false);
-    const [step, setStep] = useState(1);
+    const [submitted, setSubmitted] = useState<boolean>(false);
+    const [step, setStep] = useState<number>(1);
     const [answers, setAnswers] = useState<AnswerFinder | {
         workType: "",
         experience: "",
@@ -15,7 +15,7 @@ export default function RecommendCourse() {
         experience: "",
         timeframe: ""
     });
-    const [results, setResults] = useState<Course[] | null>(null)
+    const [result, setResult] = useState<Course | null>(null)
 
     function solve() {
         if (answers.workType === "") return;
@@ -36,37 +36,35 @@ export default function RecommendCourse() {
             .sort((a, b) => b.score - a.score)
 
         if (!filteredCourses.length) {
-            setResults([]);
+            setResult(null);
             setSubmitted(true);
             return;
         };
 
         const max = filteredCourses[0].score;
-        let toReturn: Course[] = []
+        let toReturn: Course;
         const bestMatches = filteredCourses.filter(item => item.score === max);
 
-        if (bestMatches.length) {
-            const best = bestMatches.reduce((acc, current) => {
+        const best = bestMatches.reduce((acc, current) => {
 
-                if (acc.course.fee < current.course.fee) {
-                    return current
-                }
-                return acc
+            if (acc.course.fee < current.course.fee) {
+                return current
+            }
+            return acc
 
-            }, bestMatches[0]);
+        }, bestMatches[0]);
 
-            toReturn.push(best.course);
-        }
+        toReturn = best.course;
 
         console.log(toReturn);
-        setResults(toReturn);
+        setResult(toReturn);
         setSubmitted(true);
     }
 
     return (
         !submitted ? (
             <div>
-                <div className="relative w-full max-h-150 overflow-y-auto overflow-x-hidden scrollbar-none max-w-xl px-4 py-8 border border-gray-200 rounded-xl shadow-sm place-self-center bg-white" data-aos="zoom-in">
+                <div className="relative w-full max-h-150 overflow-y-auto overflow-x-hidden scrollbar-none max-w-lg px-4 py-8 border border-gray-200 rounded-xl shadow-sm place-self-center bg-white" data-aos="zoom-in">
                     <div className="mb-8">
                         <h2 className="text-3xl font-semibold text-gray-900">Find Your Course</h2>
                         <p className="mt-2 text-sm text-gray-500">Discover the course that fits your interests, experience and goals.</p>
@@ -108,8 +106,8 @@ export default function RecommendCourse() {
             </div>
         ) : (
             <div>
-                {(results !== null) && <div>
-                    {results.map(res => <div key={res.name}>{res.name}</div>)}
+                {(result !== null) && <div>
+                    {result && <div>{result.name}</div>}
                     <div className="mt-5 flex justify-center-safe">
                         <button type="button" className="bg-accent p-2 rounded-sm cursor-pointer text-white"
                             onClick={() => {
@@ -118,7 +116,7 @@ export default function RecommendCourse() {
                             }}>Have a different choice?</button>
                     </div>
                 </div>}
-                {(results === null || !results.length) && <div className="flex flex-col gap-3 items-center-safe">
+                {(result === null || !result) && <div className="flex flex-col gap-3 items-center-safe">
                     <p>No matches found... Click the button to try again</p>
                     <button type="button" className="bg-accent p-2 rounded-sm cursor-pointer text-white"
                         onClick={() => {
