@@ -1,6 +1,6 @@
-import { sectorsServed } from "./data";
+import { sectorsServed } from "../../data/home.data";
 import styles from "./Home.module.scss";
-import type { Serve } from "./home.types";
+import type { Serve } from "../../types/home.types";
 
 function Card({ sector }: { sector: Serve }) {
 

@@ -1,5 +1,5 @@
-import { serviceLines } from "./data"
-import type { ServiceLines } from "./enterprise.types"
+import { serviceLines } from "../../data/enterpriseTraining.data"
+import type { ServiceLines } from "../../types/enterprise.types"
 
 function ServiceCard({ title, text }: ServiceLines) {
     return (

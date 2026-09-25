@@ -1,11 +1,10 @@
-import { deliveryFormat } from "./data"
-
+import { deliveryFormat } from "../../data/enterpriseTraining.data"
 
 export default function DeliveryFormat() {
     return (
         <section className="px-3 md:px-5 py-20 bg-cherry">
             <div className="pl-6">
-                <ul className="list-disc">
+                <ul className="list-disc list-inside">
                     {deliveryFormat.map(del => <li>
                         <span className="font-medium">{del.title}</span>: <span className="text-[15px]">{del.text}</span>
                     </li>)}

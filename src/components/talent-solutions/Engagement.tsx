@@ -1,5 +1,5 @@
 import Section from "../Section";
-import { fourSteps } from "./data";
+import { fourSteps } from "../../data/talentSolutions.data";
 
 export default function Engagement() {
     return (

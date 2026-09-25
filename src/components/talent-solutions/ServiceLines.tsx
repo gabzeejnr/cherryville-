@@ -1,6 +1,6 @@
 import Section from "../Section";
-import { serviceLines } from "./data";
-import type { ServiceLines } from "./talentSolutions.types";
+import { serviceLines } from "../../data/talentSolutions.data";
+import type { ServiceLines } from "../../types/talentSolutions.types";
 
 function Card({ service }: { service: ServiceLines }) {
     return (

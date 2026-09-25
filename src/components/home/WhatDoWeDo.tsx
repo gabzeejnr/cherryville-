@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { doings } from "./data";
-import type { Doings } from "./home.types";
+import { doings } from "../../data/home.data";
+import type { Doings } from "../../types/home.types";
 import styles from "./Home.module.scss";
 
 function Card({ doing }: { doing: Doings }) {

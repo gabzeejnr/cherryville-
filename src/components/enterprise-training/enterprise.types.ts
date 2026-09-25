@@ -1,1 +1,0 @@
-export type ServiceLines = { title: string, text: string }

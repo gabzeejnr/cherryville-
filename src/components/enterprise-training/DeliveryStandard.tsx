@@ -1,4 +1,4 @@
-import { deliveryStandard } from "./data"
+import { deliveryStandard } from "../../data/enterpriseTraining.data"
 
 function DeliveryCard({ title, text }: {
     title: string,
