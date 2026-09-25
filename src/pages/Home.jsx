@@ -7,14 +7,17 @@ import HowWeWork from '../components/home/HowWeWork.tsx';
 import AcademyTeaser from '../components/home/AcademyTeaser.tsx';
 import Closing from '../components/home/Closing.tsx';
 import RequestAProposal from '../components/forms/RequestAProposal.tsx';
-import useTitle from '../hooks/title.hook.tsx';
+import useDocumentMeta from '../hooks/documentMetaData.hook';
 import { useGoToTopOnLoad } from '../hooks/load.hook.tsx';
 
 export default function Home() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    useTitle("Home");
+    useDocumentMeta({
+        title: "Cherryville Limited | Corporate Tech Training & Talent Solutions in Nigeria",
+        description: "Technical training and skilled tech talent for organisations in oil and gas, banking, government and the development sector. Delivered by Microsoft Certified Trainers."
+    })
     useGoToTopOnLoad();
 
     return (

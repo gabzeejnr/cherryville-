@@ -1,6 +1,6 @@
 import { useState } from "react";
+import useDocumentMeta from "../hooks/documentMetaData.hook";
 import { useGoToTopOnLoad } from "../hooks/load.hook";
-import useTitle from "../hooks/title.hook"
 import Hero from "../components/talent-solutions/Hero";
 import Positioning from "../components/talent-solutions/Positioning";
 import ServiceLines from "../components/talent-solutions/ServiceLines";
@@ -12,7 +12,10 @@ export default function TalentSolutions() {
 
     const [isOpen, setIsOpen] = useState(false)
 
-    useTitle("Talent Solutions");
+    useDocumentMeta({
+        title: "Tech Talent Solutions & Staff Augmentation in Nigeria",
+        description: "Embedded technical specialists, trained-to-specification talent, and project delivery teams for organisations across Nigeria."
+    })
     useGoToTopOnLoad("talent-solutions");
 
     return (
