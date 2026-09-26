@@ -10,7 +10,7 @@ function Card({ doing }: { doing: Doings }) {
     const { color, bgColor } = doing.icon;
 
     return (
-        <div className="rounded-2xl overflow-hidden shadow-sm bg-white flex flex-col h-75 sm:h-85 md:h-90 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
+        <div className="rounded-2xl overflow-hidden shadow-sm bg-white flex flex-col h-auto sm:h-85 md:h-90 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500">
             <div className="flex flex-col gap-4 flex-1 border-b pb-3 px-5 pt-7 text-white"
                 style={{ backgroundColor: headingColor }}>
                 <div className={styles["icon-wrap"]} style={{ background: bgColor }}>

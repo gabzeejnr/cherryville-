@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from "react";
-import RequestAProposalButton from "../RequestAProposalButton";
+import { RequestAProposalButton } from "../Buttons";
 
 export default function Closing({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (

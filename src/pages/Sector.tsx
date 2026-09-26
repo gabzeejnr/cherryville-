@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useTitle from "../hooks/title.hook";
+import useDocumentMeta from "../hooks/documentMetaData.hook";
 import RequestAProposal from "../components/forms/RequestAProposal";
 import Challenge from "../components/sectors/Challenge";
 import Engage from "../components/sectors/Engage";
@@ -7,7 +7,7 @@ import Hero from "../components/sectors/Hero";
 import HowWeHelp from "../components/sectors/HowWehelp";
 import type { Template } from "../types/sectors.types";
 import { useGoToTopOnLoad } from "../hooks/load.hook";
-import RequestAProposalButton from "../components/RequestAProposalButton";
+import { RequestAProposalButton } from "../components/Buttons";
 
 export default function SectorTemplate({
     route,
@@ -21,7 +21,10 @@ export default function SectorTemplate({
     const title = route;
     const [isOpen, setIsOpen] = useState(false)
 
-    useTitle(title);
+    useDocumentMeta({
+        title,
+        description: ""
+    })
     useGoToTopOnLoad(`sectors/${title}`)
 
 

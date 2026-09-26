@@ -39,14 +39,27 @@
     }
 }
 
-.required{
+.required {
     position: relative;
 
-    &::before{
+    &::before {
         content: "*";
         position: absolute;
         color: red;
         right: -8px;
 
+    }
+}
+
+.typing {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 5s steps(50) forwards;
+
+    @keyframes type {
+        from {
+            width: 0;
+        }
     }
 }

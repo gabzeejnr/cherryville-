@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import styles from "./Enterprise.module.scss";
-import RequestAProposalButton from "../RequestAProposalButton";
+import { RequestAProposalButton } from "../Buttons";
 
 export default function Closing({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (

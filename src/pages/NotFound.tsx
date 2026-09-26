@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import useTitle from "../hooks/title.hook";
+import useDocumentMeta from "../hooks/documentMetaData.hook";
 import notFound from "../assets/images/not-found.png";
 import { ArrowLeft, Headphones } from "lucide-react";
 
@@ -7,7 +7,10 @@ export default function NotFound() {
 
     const navigate = useNavigate();
 
-    useTitle("Page Not Found")
+    useDocumentMeta({
+        title: "Page Not Found",
+        description: ""
+    })
 
     return (
         <main className="min-h-screen flex flex-col gap-4 items-center justify-center bg-[#F8F8F8]">
