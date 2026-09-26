@@ -1,3 +1,4 @@
+import { AccentButton } from "../Buttons";
 import Section from "../Section";
 
 export default function CTA({
@@ -18,11 +19,8 @@ export default function CTA({
             <div className="flex justify-center-safe mt-10">
                 {children && children}
                 {button && <div data-aos="flip-right">
-                    <button type="button" onClick={onClick} className="bg-accent hover:bg-accent-hover text-white px-3 py-2 rounded-full font-medium cursor-pointer">
-                        {button}
-                    </button>
-                </div>
-                }
+                    <AccentButton text={button} onClick={onClick!} />
+                </div>}
             </div>
         </Section>
     )

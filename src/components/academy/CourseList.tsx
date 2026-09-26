@@ -3,7 +3,6 @@ import Section from "../Section";
 import { Plus, Minus } from "lucide-react";
 import { addDot } from "../../utils/text.utils";
 import type { Course } from "../../types/academy.types";
-import styles from "../../styles/global.module.scss";
 
 function Card({ course }: { course: Course }) {
 

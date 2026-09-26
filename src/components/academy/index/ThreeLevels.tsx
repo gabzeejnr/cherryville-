@@ -7,7 +7,7 @@ export default function ThreeLevels() {
         <Section>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 items-center">
                 {threeLevels.map(level => (
-                    <div className="flex flex-col gap-4 lg:gap-8 h-55 sm:h-70 lg:h-80 shadow-md hover:-translate-y-3 transition-all duration-1000 hover:shadow-lg py-3 px-2 lg:p-6 rounded-2xl bg-white"
+                    <div className="flex flex-col gap-4 lg:gap-8 h-auto sm:h-70 lg:h-80 shadow-md hover:-translate-y-3 transition-all duration-1000 hover:shadow-lg py-3 px-2 lg:p-6 rounded-2xl bg-white"
                         key={level.title} data-aos="fade-up">
                         <h3 className="flex justify-center text-xl md:text-4xl font-medium mb-4 text-center">{level.title}</h3>
                         <p className="text-center text-base font-medium text-gray-600">{level.text}</p>
