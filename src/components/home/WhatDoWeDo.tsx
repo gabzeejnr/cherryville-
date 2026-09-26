@@ -37,8 +37,8 @@ export default function WhatDoWeDo() {
         <section className="px-3 md:px-10 py-20 bg-cherry">
             <h2 className="flex justify-center text-3xl md:text-4xl font-medium mb-4">What We Do</h2>
             <div className="mt-10 md:mt-15 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {doings.map(d => <div data-aos="fade-up">
-                    <Card key={d.text} doing={d} />
+                {doings.map(d => <div data-aos="fade-up" key={d.text}>
+                    <Card doing={d} />
                 </div>)}
             </div>
         </section>
