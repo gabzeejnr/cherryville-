@@ -3,18 +3,22 @@ import type { ServiceLines } from "../types/enterprise.types";
 
 const serviceLines: ServiceLines[] = [
     {
+        id: "technical-capability-development",
         title: "Technical Capability Development",
         text: "Structured cohort-based training that raises the technical capability of your existing workforce. Programs are scoped to your operatig environment, delivered in person or virtually by Microsoft Certified Trainers, and governed end to end by our programme lifecycle standard from definintion through delivery to a formal closure."
     },
     {
+        id: "custom-curriculum-design",
         title: "Custom Curriculum Design",
         text: "Curriculum, facilitator manuals, participant workbooks, competency framework and assessment instruments, built to your specifications. Commission the design alone and run it with your own trainers, or have Cherryville deliver it for you. What we build is yours to own and reuse."
     },
     {
+        id: "measurement-and-reporting",
         title: "Measurement & Reporting",
         text: "Training you can evidence. We assess capability before, during, and after delivery analyse the matched cohort, and report the movement to your executive team inn terms they can act on. When yur board asks what the investment produced, you will have an answer with data behind it."
     },
     {
+        id: "partner-and-white-label",
         title: "Partner & White - Label Delivery",
         text: "A delivery aim for consultancies and contractors who have won the work and need the training capability behind it. We deliver under your brand, to your standards, under full confidentiality. Your client relationship remains entirely yours."
     }

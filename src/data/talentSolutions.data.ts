@@ -2,14 +2,17 @@ import type { FourSteps, ServiceLines } from "../types/talentSolutions.types"
 
 const serviceLines: ServiceLines[] = [
     {
+        id: "resource-personnel",
         title: "Resource Personnel & Staff Augmentation",
         text: "Named technical specialists embedded in your project team for a defined period. We manage sourcing, contracting, supervision and performance; you gain the capability without carrying the headcount. Suitable for project peaks, specialist gaps and cover for critical roles."
     },
     {
+        id: "recruit-train-deploy",
         title: "Recruit-Train-Deploy",
         text: "We source candidates, train them against your technical specification, assess them, and deploy them job-ready. You define the standard and sign off the curriculum; we build people who meet it. This is how organisations fill roles the open market cannot supply, and how they build a pipeline rather than repeating a search every year."
     },
     {
+        id: "project-delivery",
         title: "Project Delivery Teams",
         text: "A constituted team assembled for a defined scope of work — led, managed and accountable to an agreed deliverable rather than to an hourly rate. Appropriate where you need an outcome delivered and would rather not build the management layer around it."
     }
