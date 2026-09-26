@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, type Dispatch, type SetStateAction } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./FootNav.module.scss"
 
@@ -37,7 +37,7 @@ const NAV_LINKS = [
     },
 ];
 
-function DropDown() {
+function DropDown({ setMenuOpen }: { setMenuOpen: Dispatch<SetStateAction<boolean>> }) {
 
     const { pathname } = useLocation();
 
@@ -108,7 +108,7 @@ export default function SiteNavBar() {
                 })}
             </nav>
 
-            {menuOpen && <DropDown />}
+            {menuOpen && <DropDown setMenuOpen={setMenuOpen} />}
 
             <div className="flex items-center justify-center gap-3">
                 <Link to="/contact" className={`hidden sm:inline-flex items-center justify-center px-4 ${isScrolled ? "py-1.75" : "py-2"} rounded-full bg-accent hover:bg-brand-hover text-slate-900 text-sm font-semibold transition-all duration-300 shadow-sm whitespace-nowrap`}>
