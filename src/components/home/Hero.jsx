@@ -55,9 +55,9 @@ function Stats() {
 export default function Hero({ setIsOpen }) {
     return (
         <section className={styles.hero}>
-            <div className="flex flex-col min-h-screen py-10">
+            <div className="flex flex-col min-h-screen 2xl py-10 2xl:justify-center-safe">
                 <MainHero setIsOpen={setIsOpen} />
-                <div className="mt-auto">
+                <div className="mt-auto 2xl:mt-0">
                     <Stats />
                 </div>
             </div>
