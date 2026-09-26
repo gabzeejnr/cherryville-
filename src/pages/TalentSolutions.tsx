@@ -7,6 +7,7 @@ import ServiceLines from "../components/talent-solutions/ServiceLines";
 import Engagement from "../components/talent-solutions/Engagement";
 import RequestAProposal from "../components/forms/RequestAProposal";
 import CTA from "../components/talent-solutions/CTA";
+import UseSectionId from "../hooks/useSectionId.hook";
 
 export default function TalentSolutions() {
 
@@ -17,6 +18,7 @@ export default function TalentSolutions() {
         description: "Embedded technical specialists, trained-to-specification talent, and project delivery teams for organisations across Nigeria."
     })
     useGoToTopOnLoad("talent-solutions");
+    UseSectionId();
 
     return (
         <>

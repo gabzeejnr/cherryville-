@@ -7,6 +7,7 @@ import Hero from "../components/enterprise-training/Hero";
 import Introduction from "../components/enterprise-training/Intorduction";
 import ServiceLines from "../components/enterprise-training/ServiceLines";
 import RequestAProposal from "../components/forms/RequestAProposal";
+import useSectionId from "../hooks/useSectionId.hook";
 
 export default function EnterpriseTraining() {
 
@@ -16,7 +17,7 @@ export default function EnterpriseTraining() {
         title: "Corporate Technical Training in Nigeria",
         description: "Cohort-based technical training, custom curriculum design, capability assessment and white-label delivery for organisations across Nigeria."
     })
-    // useGoToTopOnLoad("enterprise-training");
+    useSectionId()
 
     return (
         <>

@@ -21,7 +21,8 @@ export default function RoutePage() {
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<Home />} />
                 <Route path="enterprise-training" element={<EnterpriseTraining />} />
-                <Route path="sectors/" element={<NotFound />}>
+                <Route path="sectors/">
+                <Route index element={<NotFound />} />
                     {sectors.map((sec, i) => {
                         const { route, heading, headingText, challenge, engage, help } = sec;
 
