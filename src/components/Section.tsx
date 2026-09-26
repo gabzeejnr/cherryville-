@@ -9,8 +9,8 @@ export default function Section({ className, bg, title, subtitle, subtitleArray,
     children?: ReactNode
 }) {
     return (
-        <section className={`min-h-screen px-3 flex flex-col justify-center-safe md:px-10 py-20 ${bg ?? "bg-cherry"} ${className}`}>
-            <div className="flex flex-col gap-4 lg:gap-8">
+        <section className={`min-h-screen 2xl:min-h-[70dvh] px-3 flex flex-col justify-center-safe md:px-10 py-20 ${bg ?? "bg-cherry"} ${className}`}>
+            <div className="flex flex-col gap-4 lg:gap-8 2xl:gap-5">
                 {title && <h2 className="flex justify-center text-2xl md:text-3xl font-medium mb-4 text-center">{title}</h2>}
                 {subtitleArray
                     ? subtitleArray.map(sub => (<p key={sub} className="text-center text-lg font-medium text-gray-600">{sub.trim()}</p>))

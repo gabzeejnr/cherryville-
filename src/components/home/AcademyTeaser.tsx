@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import Section from "../Section";
 
 export default function AcademyTeaser() {
     return (
-        <section className="px-3 md:px-5 py-20 bg-bg h-screen flex flex-col justify-center-safe">
+        <Section bg="bg-bg">
             <div className="flex flex-col gap-5">
                 <p className="flex justify-center text-3xl font-bold text-center">Not here on behalf of an organisation?</p>
                 <p className="text-center text-lg font-medium text-gray-600" data-aos="zoom-in">
@@ -17,6 +18,6 @@ export default function AcademyTeaser() {
                     <Link to="/academy">Find your course</Link>
                 </button>
             </div>
-        </section>
+        </Section>
     )
 }
