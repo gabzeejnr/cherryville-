@@ -2,21 +2,17 @@ import { Routes, Route } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import EnterpriseTraining from "../pages/EnterpriseTraining";
-import SectorTemplate from "../components/sectors/Sector";
+import SectorTemplate from "../pages/Sector";
 import About from "../pages/About";
-import Programs from "../pages/Programs";
-import Fellowship from "../pages/Fellowship";
-import Corporate from "../pages/Corporate";
-import Partnerships from "../pages/Partnerships";
-import Insights from "../pages/Insights";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
-import { sectors } from "../components/sectors/data";
+import { sectors } from "../data/sectors.data";
 import TalentSolutions from "../pages/TalentSolutions";
 import Academy from "../pages/Academy/Academy";
 import Beginner from "../pages/Academy/Beginner";
 import Intermediate from "../pages/Academy/Intermediate";
 import Advanced from "../pages/Academy/Advanced";
+import PrivateTraining from "../pages/Academy/PrivateTraining";
 
 
 export default function RoutePage() {
@@ -25,7 +21,7 @@ export default function RoutePage() {
             <Route path="/" element={<MainLayout />}>
                 <Route index element={<Home />} />
                 <Route path="enterprise-training" element={<EnterpriseTraining />} />
-                <Route path="sectors/">
+                <Route path="sectors/" element={<NotFound />}>
                     {sectors.map((sec, i) => {
                         const { route, heading, headingText, challenge, engage, help } = sec;
 
@@ -40,13 +36,9 @@ export default function RoutePage() {
                     <Route path="beginner" element={<Beginner />} />
                     <Route path="intermediate" element={<Intermediate />} />
                     <Route path="advanced" element={<Advanced />} />
+                    <Route path="private-training" element={<PrivateTraining />} />
                 </Route>
                 <Route path="about" element={<About />} />
-                <Route path="programs" element={<Programs />} />
-                <Route path="fellowship" element={<Fellowship />} />
-                <Route path="corporate" element={<Corporate />} />
-                <Route path="partnerships" element={<Partnerships />} />
-                <Route path="insights" element={<Insights />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
