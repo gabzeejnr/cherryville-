@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import {NAV_LINKS} from "../data/header.data";
+import { NAV_LINKS } from "../data/header.data";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "./FootNav.module.scss";
 
@@ -104,7 +104,7 @@ export default function SiteNavBar() {
 
             <nav className="hidden lg:flex items-center gap-1 text-sm">
                 {NAV_LINKS.map(link => {
-                    const active = pathname === link.link;
+                    const active = pathname.split(/[/#]/)[1] === link.link?.split("/")[1];
 
                     return (
                         <div key={link.label} className="relative group">

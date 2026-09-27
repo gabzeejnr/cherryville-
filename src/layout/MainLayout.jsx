@@ -9,7 +9,7 @@ export default function MainLayout() {
             <SiteNavBar />
             <Outlet />
             <Footer />
-            <CherryVilleFooter />
+            {/* <CherryVilleFooter /> */}
         </main>
     )
 }

@@ -24,7 +24,7 @@ export default function Beginner() {
             <WhatToExpect subtitles={subtitles} />
             <CourseList courses={beginner} />
             <CTA title="Still unsure which one?" subtitle="That is normal, and it is the most common reason people delay starting. Speak to an advisor and we will recommend one course based on what interests you, not a list to choose from.">
-                <AcademyWhatsapp text="Hello! I'm interested in learning more about Cherryville Limited's programs." />
+                <AcademyWhatsapp divText="Speak to an advisor" text="Hello! I'm interested in learning more about Cherryville Limited's programs." />
             </CTA>
         </>
     )

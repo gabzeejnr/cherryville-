@@ -4,14 +4,14 @@ import styles from "./Home.module.scss";
 function MainHero({ setIsOpen }) {
     return (
         <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#AE154D]/40 bg-[#3a081a]/60 backdrop-blur-sm text-[#f4a8c4] text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#AE154D] inline-block" />
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/40 bg-[#3a081a]/60 backdrop-blur-sm text-[#f4a8c4] text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block" />
                 <span className={`${styles.typing}`}>MICROSOFT LEARNING PARTNER</span>
             </div>
 
             <h1 className="leading-10 lg:leading-15 font-bold text-3xl">
-                Build the <span className="text-[#AE154D]">Technical Capability</span> <br className="hidden sm:inline" />
-                your <span className="text-[#AE154D]">Business</span> Runs On
+                Build the <span className="text-accent">Technical Capability</span> <br className="hidden sm:inline" />
+                your <span className="text-accent">Business</span> Runs On
             </h1>
 
             <p className="text-base sm:text-lg text-gray-300/90 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">Cherryville designs and deliver techncal training for organizations

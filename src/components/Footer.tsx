@@ -1,16 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faTwitter, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import type { IconDefinition } from "@fortawesome/free-brands-svg-icons"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { footerLinks, socials } from "../data/footer.data";
+import type { FootLink, Social } from "../types/global.types";
 
-type Social = {
-    id: string,
-    icon: IconDefinition,
-    link: string
-}
-
-type FootLink = { title: string, links: { text: string, href: string }[]}
 
 function SocialLink({ social }: { social: Social }) {
     return (
@@ -22,14 +14,22 @@ function SocialLink({ social }: { social: Social }) {
     )
 }
 
-function FooterLinks({ title, links }: FootLink ) {
+function FooterLinks({ title, links }: FootLink) {
     return (
         <div>
-            <p className="text-xs font-bold text-[#D4F870] tracking-[0.15em] mb-5">{title.toUpperCase()}</p>
+            <p className="text-xs font-bold text-accent tracking-[0.15em] mb-5">{title.toUpperCase()}</p>
 
             <ul className="space-y-3">
-                {links.map(link => <li key={link.text}>
-                    <Link to={link.href} className="text-gray-400 hover:text-white text-sm transition">{link.href}</Link>
+                {links.map(link => <li key={link.text} className="w-fit py-0.5">
+                    {link.href === null
+                        ? <span className="text-gray-400 text-sm">{link.text}</span>
+                        : <Link to={link.href} className="text-gray-400 hover:text-accent text-sm transition">
+                            <span className="flex gap-1 items-center">
+                                {link.icon && <FontAwesomeIcon icon={link.icon} />}
+                                {link.text}
+                            </span>
+                        </Link>
+                    }
                 </li>)}
             </ul>
         </div>
@@ -38,44 +38,9 @@ function FooterLinks({ title, links }: FootLink ) {
 
 export default function Footer() {
 
-    const socials: Social[] = [
-        {
-            id: "message",
-            icon: faWhatsapp,
-            link: "https://somekindofwhatsappurl.com"
-        },
-        {
-            id: "email",
-            icon: faEnvelope,
-            link: "mailto:gabrieldodowei@gmail.com"
-        },
-        {
-            id: "linkedIn",
-            icon: faLinkedin,
-            link: "https://I_dont_know_linkedin_url.com"
-        },
-        {
-            id: "x",
-            icon: faTwitter,
-            link: "https://x.com/gabzeejnr"
-        }
-    ];
-
-    const footerLinks:FootLink[] = [
-        {
-            title: "Programs",
-            links: [
-                {
-                    text: "Data Analytics & Data Science",
-                    href: ``
-                }
-            ]
-        }
-    ]
-
     return (
         <footer className="relaive bg-[#0A1628]">
-            <div className="flex flex-col md:flex-row mx-auto px-6 lg:px-12 py-16">
+            <div className="flex flex-col gap-10 md:gap-15 lg:gap-20 md:flex-row md:items-center lg:justify-center-safe mx-auto px-6 lg:px-12 py-16">
                 <div>
                     <div className="flex items-center gap-2.5 mb-4">
                         <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: "#D4F870" }}>
@@ -85,11 +50,21 @@ export default function Footer() {
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">Emowering Growth Through Learning</p>
                     <div className="flex items-center gap-3">
-                        {socials.map(social => <SocialLink social={social} />)}
+                        {socials.map(social => <SocialLink key={social.id} social={social} />)}
                     </div>
                 </div>
 
+                <div className="grid gap-10 md:gap-15 sm:grid-cols-2 lg:grid-cols-3">
+                    {footerLinks.map(foot => <FooterLinks key={foot.title} title={foot.title} links={foot.links} />)}
+                </div>
+            </div>
 
+            <div className="md:mx-10 md:px-5 lg:mx-30 pb-5 md:pb-10 border-t border-white/10 mt-14 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p className="text-xs text-gray-500">© 2026 Cherryville Limited. All rights reserved.</p>
+                <div className="flex items-center gap-6 text-xs text-gray-400">
+                    <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
+                    <a href="#" className="hover:text-white transition">Terms of Service</a>
+                </div>
             </div>
         </footer>
     )
