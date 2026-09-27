@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
     "@fortawesome/react-fontawesome": "^3.5.0",
     "@tailwindcss/cli": "^4.3.3",
     "aos": "^2.3.4",
