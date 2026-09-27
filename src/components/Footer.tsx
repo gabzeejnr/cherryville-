@@ -43,10 +43,10 @@ export default function Footer() {
             <div className="flex flex-col gap-10 md:gap-15 lg:gap-20 md:flex-row md:items-center lg:justify-center-safe mx-auto px-6 lg:px-12 py-16">
                 <div>
                     <div className="flex items-center gap-2.5 mb-4">
-                        <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: "#D4F870" }}>
-                            <span className="text-slate-950 font-extrabold text-base leading-none">C</span>
+                        <div className="w-8 h-8 rounded-md overflow-hidden flex items-center justify-center">
+                            <img src="/brand-logo.jpeg" />
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-white">Cherryville</span>
+                        <span className="text-xl font-bold tracking-tight text-white">CherryVille</span>
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">Emowering Growth Through Learning</p>
                     <div className="flex items-center gap-3">
