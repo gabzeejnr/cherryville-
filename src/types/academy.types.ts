@@ -1,6 +1,7 @@
 type WorkType = "numbers" | "design" | "hands-on" | "organising" | "security";
 type Experience = "beginner" | "intermediate" | "advanced"
-type TimeFrame = "3 months" | "6 months" | "1 year" | "unknown"
+type TimeFrame = "3 months" | "6 months" | "1 year" | "unknown";
+type LearningStyle = "virtual" | "weekday" | "weekend"
 
 type Questions = {
     id: string,
@@ -16,7 +17,7 @@ type Course = {
     name: string,
     whoIsItFor: string,
     workType: WorkType[],
-    learningStyle: "virtual",
+    learningStyle: LearningStyle,
     experience: Experience,
     timeframe: TimeFrame[],
     outcome: string[],
@@ -31,4 +32,4 @@ type AnswerFinder = {
     timeframe: TimeFrame
 }
 
-export type { Questions, Course, AnswerFinder, WorkType }
+export type { Questions, Course, AnswerFinder, WorkType, LearningStyle }

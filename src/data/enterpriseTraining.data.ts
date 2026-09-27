@@ -15,7 +15,7 @@ const serviceLines: ServiceLines[] = [
     {
         id: "measurement-and-reporting",
         title: "Measurement & Reporting",
-        text: "Training you can evidence. We assess capability before, during, and after delivery analyse the matched cohort, and report the movement to your executive team inn terms they can act on. When yur board asks what the investment produced, you will have an answer with data behind it."
+        text: "Training you can evidence. We assess capability before, during, and after delivery analyse the matched cohort, and report the movement to your executive team inn terms they can act on. When your board asks what the investment produced, you will have an answer with data behind it."
     },
     {
         id: "partner-and-white-label",

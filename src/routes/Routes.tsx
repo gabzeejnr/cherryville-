@@ -13,6 +13,7 @@ import Beginner from "../pages/Academy/Beginner";
 import Intermediate from "../pages/Academy/Intermediate";
 import Advanced from "../pages/Academy/Advanced";
 import PrivateTraining from "../pages/Academy/PrivateTraining";
+import Legal from "../pages/Legal";
 
 
 export default function RoutePage() {
@@ -22,7 +23,7 @@ export default function RoutePage() {
                 <Route index element={<Home />} />
                 <Route path="enterprise-training" element={<EnterpriseTraining />} />
                 <Route path="sectors/">
-                <Route index element={<NotFound />} />
+                    <Route index element={<NotFound />} />
                     {sectors.map((sec, i) => {
                         const { route, heading, headingText, challenge, engage, help } = sec;
 
@@ -41,6 +42,7 @@ export default function RoutePage() {
                 </Route>
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="privacy" element={<Legal />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>

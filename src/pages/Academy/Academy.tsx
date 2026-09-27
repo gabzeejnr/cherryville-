@@ -22,7 +22,7 @@ export default function Academy() {
             <ThreeLevels />
             <WhyCherryville />
             <CTA subtitle="Speak to an advisor before you enrol. It takes ten minutes and it saves you from paying for the wrong course.">
-                <AcademyWhatsapp text="Hello! I'm interested in learning more about Cherryville Limited's programs." />
+                <AcademyWhatsapp divText="Speak to an advisor" text="Hello! I'm interested in learning more about Cherryville Limited's programs." />
             </CTA>
         </>
     )

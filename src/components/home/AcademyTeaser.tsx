@@ -6,7 +6,7 @@ export default function AcademyTeaser() {
         <Section bg="bg-bg">
             <div className="flex flex-col gap-5">
                 <p className="flex justify-center text-3xl font-bold text-center">Not here on behalf of an organisation?</p>
-                <p className="text-center text-lg font-medium text-gray-600" data-aos="zoom-in">
+                <p className="text-center text-lg font-medium text-text" data-aos="zoom-in">
                     Cherryville academy runs courses for individuals at every level; including for people who have never worked in tech before.
                     <br />
                     {" "}

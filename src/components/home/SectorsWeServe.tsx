@@ -5,10 +5,10 @@ import type { Serve } from "../../types/home.types";
 function Card({ sector }: { sector: Serve }) {
 
     const { title, text } = sector;
-
     const { icon: Icon, bgColor } = sector.icon
+    
     return (
-        <div className="rounded-2xl py-7 overflow-hidden shadow-sm bg-white flex flex-col gap-4 p-4 items-start justify-center h-50">
+        <div className="rounded-2xl py-7 overflow-hidden shadow-sm bg-cherry flex flex-col gap-4 p-4 items-start justify-center h-50">
             <div className={styles["icon-wrap"]} style={{ background: bgColor }}>
                 <Icon color="white" />
             </div>

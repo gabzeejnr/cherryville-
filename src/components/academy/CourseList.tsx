@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Section from "../Section";
-import { Plus, Minus } from "lucide-react";
+import AcademyEnrollment from "../forms/AcademyEnrollment";
 import { addDot } from "../../utils/text.utils";
+import { Plus } from "lucide-react";
+import type { Dispatch, SetStateAction } from "react";
 import type { Course } from "../../types/academy.types";
 
-function Card({ course }: { course: Course }) {
+function Card({ course, setEnroll }: { course: Course, setEnroll: Dispatch<SetStateAction<boolean>> }) {
 
     const [open, setOpen] = useState<boolean>(false);
     const {
@@ -17,16 +19,16 @@ function Card({ course }: { course: Course }) {
             {!open
                 ? <div className="flex items-center justify-between p-3 transition-all duration-[5s] shadow-accent-hover shadow-xs rounded-xl bg-accent">
                     <span>{name}</span>
-                    <button type="button" onClick={() => setOpen(p => !p)}>
-                        <Plus />
-                    </button>
+                    <button type="button" onClick={() => setOpen(p => !p)}
+                        className="hover:rotate-360"
+                    ><Plus /></button>
                 </div>
                 : <div className="flex flex-col gap-2 shadow-md p-3 transition-all duration-[5s] shadow-accent-hover rounded-xl bg-accent ">
                     <div className="flex justify-between">
                         <span>{name}</span>
-                        <button type="button" onClick={() => setOpen(p => !p)}>
-                            <Minus />
-                        </button>
+                        <button type="button" onClick={() => setOpen(p => !p)}
+                            className="rotate-45 hover:rotate-360"
+                        ><Plus /></button>
                     </div>
                     <div className="flex flex-col mt-2 md:mt-3">
                         <h3 className="font-bold">Who is it for?</h3>
@@ -46,6 +48,11 @@ function Card({ course }: { course: Course }) {
                         <span className="font-bold">Format: </span>
                         <span>{learningStyle}</span>
                     </span>
+                    <div className="flex justify-end">
+                        <button type="button" className="bg-cherry hover:bg-[#f5e3d4] hover:shadow-2xl rounded-2xl p-2 text-black"
+                            onClick={() => setEnroll(p => !p)}
+                        >Enroll Now</button>
+                    </div>
                 </div>
             }
         </div>
@@ -54,18 +61,24 @@ function Card({ course }: { course: Course }) {
 
 
 export default function CourseList({ courses }: { courses: Course[] }) {
+
+    const [enroll, setEnroll] = useState(false)
+
     return (
-        <Section title="Courses" bg="bg-bg">
-            <div className="mt-10">
-                {courses
-                    ? <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-center">
-                        {courses.map(course => <div data-aos="fade-up" key={course.name}>
-                            <Card course={course} />
-                        </div>)}
-                    </div>
-                    : <div>Couldn't get courses... Please reload to try again</div>
-                }
-            </div>
-        </Section>
+        <>
+            <Section title="Courses" bg="bg-bg">
+                <div className="mt-10">
+                    {courses
+                        ? <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 items-center">
+                            {courses.map(course => <div data-aos="fade-up" key={course.name}>
+                                <Card course={course} setEnroll={setEnroll} />
+                            </div>)}
+                        </div>
+                        : <div>Couldn't get courses... Please reload to try again</div>
+                    }
+                </div>
+            </Section>
+            {enroll && <AcademyEnrollment setEnroll={setEnroll} />}
+        </>
     )
 }
