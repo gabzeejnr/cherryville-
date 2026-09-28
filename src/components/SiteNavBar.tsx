@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from "../data/header.data";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "./FootNav.module.scss";
+import { image } from "../data";
 
 function DropDown({ setMenuOpen }: { setMenuOpen: Dispatch<SetStateAction<boolean>> }) {
     const { pathname } = useLocation();
@@ -97,7 +98,7 @@ export default function SiteNavBar() {
         <header className={`sticky top-0 z-100 flex items-center justify-between px-6 lg:px-8 ${isScrolled ? "py-3" : "py-4"} bg-white border-b border-gray-100 transition-all duration-200`}>
             <NavLink to="/" className="flex items-center gap-2 shrink-0">
                 <div className="flex items-center justify-center overflow-hidden rounded-md bg-[#D4F870] w-7 h-7">
-                    <img src="/brand-logo.jpeg" />
+                    <img src={image} />
                 </div>
                 <span className="text-lg font-extrabold tracking-tight text-slate-800">CherryVille</span>
             </NavLink>

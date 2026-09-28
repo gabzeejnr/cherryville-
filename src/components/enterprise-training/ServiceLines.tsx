@@ -1,7 +1,6 @@
 import Section from "../Section";
 import { serviceLines } from "../../data/enterpriseTraining.data"
 import { TitleText } from "../Cards";
-import type { ServiceLines } from "../../types/enterprise.types"
 
 
 export default function ServiceLines() {

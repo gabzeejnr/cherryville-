@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { footerLinks, socials } from "../data/footer.data";
 import type { FootLink, Social } from "../types/global.types";
+import { image } from "../data";
 
 
 function SocialLink({ social }: { social: Social }) {
@@ -44,7 +45,7 @@ export default function Footer() {
                 <div>
                     <div className="flex items-center gap-2.5 mb-4">
                         <div className="w-8 h-8 rounded-md overflow-hidden flex items-center justify-center">
-                            <img src="/brand-logo.jpeg" />
+                            <img src={image} />
                         </div>
                         <span className="text-xl font-bold tracking-tight text-white">CherryVille</span>
                     </div>
