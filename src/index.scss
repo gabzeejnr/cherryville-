@@ -1,5 +1,5 @@
 :root {
-    --bg: #fefbf8;
+    --bg: #faf8f6;
     --border: #e5e4e7;
     --code-bg: #f4f3ec;
     --accent: #AE154D;
@@ -92,16 +92,6 @@ code {
     padding: 4px 8px;
     background: var(--code-bg);
 }
-
-/* .w-full.rounded-md.border.border-gray-300.bg-white.px-4.py-3.text-sm.outline-none.transition::picker(select){
-    background: var(--cherry);
-    border-radius: 1rem;
-
-
-    option {
-        padding: 10px 0;
-    }
-} */
 
 .gray-subheading {
     text-align: center;
