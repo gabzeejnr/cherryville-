@@ -1,4 +1,4 @@
-export type Template = {
+type Template = {
     route: "oil-and-gas" | "banking" | "government" | "development",
     heading: {
         text: string,
@@ -12,3 +12,5 @@ export type Template = {
     }[],
     engage: string
 }
+
+export type { Template }

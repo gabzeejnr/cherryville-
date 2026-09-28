@@ -13,7 +13,7 @@ import Beginner from "../pages/Academy/Beginner";
 import Intermediate from "../pages/Academy/Intermediate";
 import Advanced from "../pages/Academy/Advanced";
 import PrivateTraining from "../pages/Academy/PrivateTraining";
-import Legal from "../pages/Legal";
+import Terms from "../pages/Terms";
 
 
 export default function RoutePage() {
@@ -42,7 +42,7 @@ export default function RoutePage() {
                 </Route>
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
-                <Route path="privacy" element={<Legal />} />
+                <Route path="terms" element={<Terms />} />
                 <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
