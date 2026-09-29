@@ -99,7 +99,10 @@ export default function SiteNavBar() {
                 <div className="flex items-center justify-center overflow-hidden rounded-md bg-[#D4F870] w-7 h-7">
                     <img src={image} />
                 </div>
-                <span className="text-lg font-extrabold tracking-tight text-slate-800">CherryVille</span>
+                <span className="flex flex-col gap-px text-lg font-extrabold tracking-tight text-slate-800">
+                    CherryVille
+                    <span className="text-accent text-xs">Limited</span>
+                </span>
             </NavLink>
 
             <nav className="hidden lg:flex items-center gap-1 text-sm">

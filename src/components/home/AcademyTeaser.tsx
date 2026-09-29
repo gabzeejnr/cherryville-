@@ -14,9 +14,7 @@ export default function AcademyTeaser() {
                 </p>
             </div>
             <div className="flex justify-center mt-10" data-aos="flip-left">
-                <button type="button" className="bg-accent hover:bg-accent-hover text-white px-3 py-2 rounded-full font-medium cursor-pointer">
-                    <Link to="/academy">Find your course</Link>
-                </button>
+                <Link to="/academy" className="bg-accent hover:bg-accent-hover text-white px-3 py-2 rounded-full font-medium cursor-pointer">Find your course</Link>
             </div>
         </Section>
     )

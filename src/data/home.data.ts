@@ -1,5 +1,5 @@
 import { TextSearch, Users, GraduationCap, Dome, Activity, Banknote } from "lucide-react";
-import { microsoft, amadocs, ey, ibm, infosys, kpmg } from "../libs";
+import { microsoft, amdocs, ey, ibm, infosys, kpmg } from "../libs";
 import type { Marquee, Doings, Serve } from "../types/home.types";
 
 const marquee: Marquee[] = [
@@ -8,8 +8,8 @@ const marquee: Marquee[] = [
         name: "Microsoft"
     },
     {
-        image: amadocs,
-        name: "Amadocs"
+        image: amdocs,
+        name: "Amdocs"
     },
     {
         image: ey,
@@ -31,7 +31,7 @@ const marquee: Marquee[] = [
 const doings: readonly Doings[] = [
     {
         title: "Enterprise Training",
-        text: "Techincal training for your workforce; scoped to your operating envirnment, delivered by certified trainers, aand evidenced with assessment data your executive team can act on.",
+        text: "Technical training for your workforce; scoped to your operating environment, delivered by certified trainers, and evidenced with assessment data your executive team can act on.",
         icon: {
             icon: TextSearch,
             bgColor: "teal"
@@ -44,7 +44,7 @@ const doings: readonly Doings[] = [
     },
     {
         title: "Talent Solutions",
-        text: "Skilled technical people, supplied to your specifications. Embed a specialist in your team, commision talent trained to your standard, or engage a full delivery team for a defined scope.",
+        text: "Skilled technical people, supplied to your specifications. Embed a specialist in your team, commission talents trained to your standard, or engage a full delivery team for a defined scope.",
         icon: {
             icon: Users,
             bgColor: "green"

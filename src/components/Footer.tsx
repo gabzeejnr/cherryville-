@@ -40,16 +40,19 @@ function FooterLinks({ title, links }: FootLink) {
 export default function Footer() {
 
     return (
-        <footer className="relaive bg-[#0A1628]">
+        <footer className="relative bg-[#0A1628]">
             <div className="flex flex-col gap-10 md:gap-15 lg:gap-20 md:flex-row md:items-center lg:justify-center-safe mx-auto px-6 lg:px-12 py-16">
                 <div>
                     <div className="flex items-center gap-2.5 mb-4">
                         <div className="w-8 h-8 rounded-md overflow-hidden flex items-center justify-center">
                             <img src={image} />
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-white">CherryVille</span>
+                        <span className="flex flex-col text-lg font-extrabold tracking-tight text-white">
+                            CherryVille
+                            <span className="text-accent text-xs -mt-1">Limited</span>
+                        </span>
                     </div>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">Emowering Growth Through Learning</p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-xs">Empowering Growth Through Learning</p>
                     <div className="flex items-center gap-3">
                         {socials.map(social => <SocialLink key={social.id} social={social} />)}
                     </div>

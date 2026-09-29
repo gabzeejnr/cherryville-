@@ -14,7 +14,8 @@ function MainHero({ setIsOpen }) {
                 your <span className="text-accent">Business</span> Runs On
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-300/90 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">Cherryville designs and deliver techncal training for organizations
+            <p className="text-base sm:text-lg text-gray-300/90 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
+                Cherryville designs and delivers technical training for organizations
                 across oil and gas, banking, government and the development sector
                 — and supplies the skilled talent to keep the work moving.
             </p>
@@ -34,8 +35,8 @@ function MainHero({ setIsOpen }) {
 function Stats() {
 
     const METRICS = [
-        { value: "10M+", label: "Individuals Trained" },
-        { value: "800+", label: "Technology Courses" },
+        { value: "1K+", label: "Individuals Trained" },
+        { value: "20+", label: "Technology Courses" },
         { value: "80+", label: "Learning Experiences" },
         { value: "100+", label: "Training Experts" },
     ];
