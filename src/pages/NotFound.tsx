@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import useDocumentMeta from "../hooks/documentMetaData.hook";
+import { useDocumentMeta } from "../hooks";
 import notFound from "../assets/images/not-found.png";
 import { ArrowLeft, Headphones } from "lucide-react";
 

@@ -1,12 +1,11 @@
 import { useState } from "react";
-import useDocumentMeta from "../hooks/documentMetaData.hook";
+import { useDocumentMeta, useGoToTopOnLoad } from "../hooks";
 import RequestAProposal from "../components/forms/RequestAProposal";
 import Challenge from "../components/sectors/Challenge";
 import Engage from "../components/sectors/Engage";
 import Hero from "../components/sectors/Hero";
 import HowWeHelp from "../components/sectors/HowWehelp";
 import type { Template } from "../types/sectors.types";
-import { useGoToTopOnLoad } from "../hooks/load.hook";
 import { RequestAProposalButton } from "../components/Buttons";
 
 export default function SectorTemplate({

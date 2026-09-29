@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useDocumentMeta from "../hooks/documentMetaData.hook";
+import { useDocumentMeta, useGoToTopOnLoad } from "../hooks";
 import Hero from "../components/contact/Hero";
 import ContactFormSection from "../components/contact/ContactFormSection";
 import WhatHappensNext from "../components/contact/WhatHappensNext";
@@ -13,6 +13,7 @@ export default function Contact() {
         title: "Request a Proposal",
         description: "Tell us what your team needs to be able to do. We respond with a scoped programme, timeline and price within two business days."
     })
+    useGoToTopOnLoad("contact")
 
     return (
         <>

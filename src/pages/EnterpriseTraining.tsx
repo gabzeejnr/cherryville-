@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useDocumentMeta from "../hooks/documentMetaData.hook";
+import {useDocumentMeta} from "../hooks";
 import Closing from "../components/enterprise-training/Closing";
 import DeliveryFormat from "../components/enterprise-training/DeliveryFormat";
 import DeliveryStandard from "../components/enterprise-training/DeliveryStandard";

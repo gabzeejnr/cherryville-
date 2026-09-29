@@ -1,5 +1,5 @@
-import useDocumentMeta from "../../hooks/documentMetaData.hook";
-import { useGoToTopOnLoad } from "../../hooks/load.hook";
+import { useDocumentMeta } from "../../hooks";
+import { useGoToTopOnLoad } from "../../hooks";
 import CourseFinder from "../../components/academy/index/CourseFinder";
 import Hero from "../../components/academy/index/Hero";
 import ThreeLevels from "../../components/academy/index/ThreeLevels";

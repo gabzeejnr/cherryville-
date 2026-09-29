@@ -1,4 +1,4 @@
-import useDocumentMeta from "../../hooks/documentMetaData.hook";
+import {useDocumentMeta} from "../../hooks";
 import Hero from "../../components/academy/advanced/Hero";
 import CourseList from "../../components/academy/CourseList";
 import CTA from "../../components/academy/CTA";

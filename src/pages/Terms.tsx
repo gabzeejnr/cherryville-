@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useScrollSpy } from '../hooks';
+import { useScrollSpy, useGoToTopOnLoad } from '../hooks';
 import { Breadcrumbs, NavLink, OnThisPage, PartView, Sidebar } from '../components/terms';
 import { DOC, PARTS } from "../data";
 import { sectionId, SECTION_IDS, clauseId, CLAUSE_IDS, partId } from '../libs';
 import type { Crumb } from "../types";
-
-/* ═════════════════════════════ 5. INDEX ═════════════════════════════════ */
 
 const ROOT: Crumb = { label: 'Terms', id: 'top' };
 
@@ -40,7 +38,7 @@ export default function TermsPage() {
 
     const [navOpen, setNavOpen] = useState(false);
     const [query, setQuery] = useState('');
-    const [open, setOpen] = useState<Record<string, boolean>>({ [partId('a')]: true });
+    const [open, setOpen] = useState<Record<string, boolean>>({ [partId(PARTS[0].id)]: true });
 
     useEffect(() => {
         if (activePart) setOpen((o) => (o[activePart] ? o : { ...o, [activePart]: true }));
@@ -51,6 +49,8 @@ export default function TermsPage() {
         const id = window.location.hash.slice(1);
         if (id) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
     }, []);
+
+    useGoToTopOnLoad("terms")
 
     const tocPart = PARTS.find((p) => partId(p.id) === activePart) ?? PARTS[0];
 

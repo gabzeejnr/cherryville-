@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useDocumentMeta from "../hooks/documentMetaData.hook";
+import { useDocumentMeta } from "../hooks";
 import { useGoToTopOnLoad } from "../hooks/load.hook";
 import Hero from "../components/talent-solutions/Hero";
 import Positioning from "../components/talent-solutions/Positioning";
