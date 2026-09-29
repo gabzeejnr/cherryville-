@@ -1,3 +1,4 @@
+export * from "./academy.types";
 export * from "./enterprise.types";
 export * from "./global.types";
 export * from "./home.types";

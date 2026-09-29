@@ -1,6 +1,11 @@
 import type { LucideIcon } from "lucide-react";
 
-export type Doings = {
+type Marquee = {
+    image: string,
+    name: string
+}
+
+type Doings = {
     title: string,
     text: string,
     icon: {
@@ -15,7 +20,7 @@ export type Doings = {
     }
 }
 
-export type Serve = {
+type Serve = {
     title: string,
     text: string,
     icon: {
@@ -23,3 +28,5 @@ export type Serve = {
         bgColor: string
     }
 }
+
+export type { Marquee, Doings, Serve }
