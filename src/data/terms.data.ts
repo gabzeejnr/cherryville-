@@ -90,7 +90,7 @@ const PART_A: Part = {
     ],
 };
 
-// ── Part B — Enterprise Training ─────────────────────────────────────────
+
 const PART_B: Part = {
     id: 'b',
     label: 'Part B',
@@ -178,7 +178,7 @@ const PART_B: Part = {
     ],
 };
 
-// ── Part C — Talent Solutions ────────────────────────────────────────────
+
 const PART_C: Part = {
     id: 'c',
     label: 'Part C',
@@ -253,7 +253,7 @@ const PART_C: Part = {
     ],
 };
 
-// ── Part D — Cherryville Academy ─────────────────────────────────────────
+
 const PART_D: Part = {
     id: 'd',
     label: 'Part D',
@@ -362,7 +362,7 @@ const PART_D: Part = {
     ],
 };
 
-// ── Part E — Private Training ────────────────────────────────────────────
+
 const PART_E: Part = {
     id: 'e',
     label: 'Part E',
@@ -391,7 +391,7 @@ const PART_E: Part = {
     ],
 };
 
-// ── Part F — Terms applying to all Services ──────────────────────────────
+
 const PART_F: Part = {
     id: 'f',
     label: 'Part F',

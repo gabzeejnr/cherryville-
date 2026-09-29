@@ -1,5 +1,32 @@
 import { TextSearch, Users, GraduationCap, Dome, Activity, Banknote } from "lucide-react";
-import type { Doings, Serve } from "../types/home.types"
+import { microsoft, amadocs, ey, ibm, infosys, kpmg } from "../libs";
+import type { Marquee, Doings, Serve } from "../types/home.types";
+
+const marquee: Marquee[] = [
+    {
+        image: microsoft,
+        name: "Microsoft"
+    },
+    {
+        image: amadocs,
+        name: "Amadocs"
+    },
+    {
+        image: ey,
+        name: "ey"
+    },
+    {
+        image: ibm,
+        name: "ibm"
+    },
+    {
+        image: infosys,
+        name: "infosys"
+    },{
+        image: kpmg,
+        name: "kpmg"
+    }
+]
 
 const doings: readonly Doings[] = [
     {
@@ -80,4 +107,4 @@ const sectorsServed: readonly Serve[] = [
 
 
 
-export { doings, sectorsServed }
+export { marquee, doings, sectorsServed }
