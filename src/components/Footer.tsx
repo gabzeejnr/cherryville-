@@ -64,7 +64,7 @@ export default function Footer() {
                 <p className="text-xs text-gray-500">© 2026 Cherryville Limited. All rights reserved.</p>
                 <div className="flex items-center gap-6 text-xs text-gray-400">
                     <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
-                    <a href="#" className="hover:text-white transition">Terms of Service</a>
+                    <Link to="/terms" className="hover:text-white transition">Terms of Service</Link>
                 </div>
             </div>
         </footer>

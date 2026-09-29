@@ -1,6 +1,6 @@
-import { sectorsServed } from "../../data/home.data";
+import { sectorsServed } from "../../data";
 import styles from "./Home.module.scss";
-import type { Serve } from "../../types/home.types";
+import type { Serve } from "../../types";
 
 function Card({ sector }: { sector: Serve }) {
 
@@ -28,8 +28,8 @@ export default function SectorsWeServe() {
                 <p className="text-center text-lg font-medium text-gray-600">Different sectors buy training for different reasons. We build the programme around yours.</p>
             </div>
             <div className="mt-10 md:mt-15 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {sectorsServed.map(sec => <div data-aos="slide-right">
-                    <Card sector={sec} key={sec.text} />
+                {sectorsServed.map(sec => <div data-aos="slide-right" key={sec.text}>
+                    <Card sector={sec} />
                 </div>)}
             </div>
         </section>

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Section from "../Section";
 import AcademyEnrollment from "../forms/AcademyEnrollment";
-import { addDot } from "../../utils/text.utils";
+import { addDot } from "../../utils";
 import { Plus } from "lucide-react";
 import type { Dispatch, SetStateAction } from "react";
-import type { Course } from "../../types/academy.types";
+import type { Course } from "../../types";
 
 function Card({ course, setEnroll }: { course: Course, setEnroll: Dispatch<SetStateAction<boolean>> }) {
 

@@ -1,12 +1,6 @@
-import useDocumentMeta from "../../hooks/documentMetaData.hook";
 import styles from "../../styles/global.module.scss";
 
 export default function Hero() {
-
-    useDocumentMeta({
-        title: "About Cherryville Limited | Tech Training & Talent, Lagos ",
-        description: "Cherryville Limited is a Lagos-based education technology and capacity development company delivering technical training and talent solutions across Nigeria."
-    })
 
     return (
         <section className={styles.hero}>

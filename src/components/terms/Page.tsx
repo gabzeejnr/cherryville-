@@ -19,7 +19,7 @@ function OnThisPage({ part, activeSection }: { part: Part; activeSection?: strin
                                     current={active}
                                     className={`-ml-px block border-l-2 py-1 pl-3 text-[13px] leading-5 ${active
                                         ? 'border-accent font-medium text-accent'
-                                        : 'border-transparent text-slate-500 hover:border-slate-300 hover:text-slate-900'
+                                        : 'border-transparent text-slate-500 hover:border-accent hover:text-accent'
                                         }`}
                                 >
                                     {s.title}

@@ -41,12 +41,12 @@ function Sidebar({
                                 onClick={() => onToggle(partId(p.id))}
                                 aria-expanded={isOpen}
                                 aria-label={`${isOpen ? 'Collapse' : 'Expand'} ${p.label}`}
-                                className="rounded p-1 text-slate-400 hover:text-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                                className="rounded p-1 text-slate-400 hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             ><Chevron className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-90' : ''}`} /></button>
                             <NavLink id={partId(p.id)} onNavigate={onNavigate}
                                 className={`flex-1 rounded px-2 py-1.5 text-sm font-semibold ${partActive
                                     ? 'text-accent'
-                                    : 'text-slate-800 hover:bg-slate-50'}`
+                                    : 'text-slate-800 hover:bg-cherry'}`
                                 }>{p.label} — {p.title}
                             </NavLink>
                         </div>
@@ -60,7 +60,7 @@ function Sidebar({
                                             <NavLink id={sectionId(s.n)} onNavigate={onNavigate} current={active}
                                                 className={`-ml-px block border-l-2 py-1.5 pl-4 pr-2 text-[13px] leading-5 ${active
                                                     ? 'border-accent bg-accent/5 font-medium text-accent'
-                                                    : 'border-transparent text-slate-600 hover:border-slate-300 hover:text-slate-900'
+                                                    : 'border-transparent text-slate-600 hover:border-accent hover:text-accent hover:underline'
                                                     }`}
                                             >{s.n}. {s.title}</NavLink>
                                         </li>

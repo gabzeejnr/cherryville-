@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { questions, courses } from "../../../data/academy.data";
-import type { AnswerFinder, Course } from "../../../types/academy.types";
+import { questions, courses } from "../../../data";
+import type { AnswerFinder, Course } from "../../../types";
 
 export default function RecommendCourse() {
 
