@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { addDot } from "../utils/text.utils";
+import { addDot } from "../utils";
 
 type DocumentMeta = {
     title: string,
@@ -7,7 +7,7 @@ type DocumentMeta = {
 }
 
 
-export default function useDocumentMeta({ title, description }: DocumentMeta) {
+function useDocumentMeta({ title, description }: DocumentMeta) {
 
     if (!title?.trim().length) {
 
@@ -50,3 +50,5 @@ export default function useDocumentMeta({ title, description }: DocumentMeta) {
 
     }, [title, description])
 }
+
+export { useDocumentMeta }
