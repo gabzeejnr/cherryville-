@@ -1,4 +1,4 @@
-export function addDot(text: string) {
+function addDot(text: string) {
     const t = text.trim();
     const l = t.length;
     let p: string;
@@ -11,3 +11,5 @@ export function addDot(text: string) {
 
     return p
 }
+
+export { addDot }
