@@ -19,7 +19,7 @@
     letter-spacing: 0.18px;
     color-scheme: light dark;
     color: var(--text);
-    background: var(--bg);
+    background: var(--cherry);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -30,26 +30,26 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text: #F4F0F2;
-        --bg: #111014;
-        --border: #302B31;
-        --code-bg: #1B181D;
-        --accent: #E66A9A;
-        --cherry: #321A25;
-        --accent-bg: rgba(230, 106, 154, 0.12);
-        --accent-border: rgba(230, 106, 154, 0.45);
-        --social-bg: rgba(48, 43, 49, 0.55);
-        --shadow:
-            rgba(0, 0, 0, 0.45) 0 10px 15px -3px,
-            rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
-    }
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         --text: #F4F0F2;
+//         --bg: #111014;
+//         --border: #302B31;
+//         --code-bg: #1B181D;
+//         --accent: #E66A9A;
+//         --cherry: #321A25;
+//         --accent-bg: rgba(230, 106, 154, 0.12);
+//         --accent-border: rgba(230, 106, 154, 0.45);
+//         --social-bg: rgba(48, 43, 49, 0.55);
+//         --shadow:
+//             rgba(0, 0, 0, 0.45) 0 10px 15px -3px,
+//             rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+//     }
 
-    #social .button-icon {
-        filter: invert(1) brightness(2);
-    }
-}
+//     #social .button-icon {
+//         filter: invert(1) brightness(2);
+//     }
+// }
 
 * {
     transition: all 500ms;

@@ -4,6 +4,7 @@ import ey from "../assets/images/ey.png";
 import ibm from "../assets/images/ibm-logo.svg";
 import infosys from "../assets/images/infosys-logo.svg";
 import kpmg from "../assets/images/kpmg-logo.svg";
+import classroom from "../assets/images/classroom.jpg";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     ey,
     ibm,
     infosys,
-    kpmg
+    kpmg,
+    classroom
 }

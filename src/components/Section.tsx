@@ -5,11 +5,11 @@ export default function Section({ className, bg, title, subtitle, subtitleArray,
     title?: string,
     subtitle?: string,
     subtitleArray?: string[],
-    bg?: "bg-cherry" | "bg-bg",
+    bg?: "bg-cherry" | "bg-bg" | "bg-white",
     children?: ReactNode
 }) {
     return (
-        <section className={`min-h-screen 2xl:min-h-[70dvh] px-3 flex flex-col justify-center-safe md:px-10 py-20 ${bg ?? "bg-cherry"} ${className}`}>
+        <section className={`min-h-screen 2xl:min-h-[70dvh] overflow-hidden px-3 flex flex-col justify-center-safe md:px-10 py-20 ${bg ?? "bg-cherry"} ${className}`}>
             <div className="flex flex-col gap-4 lg:gap-8 2xl:gap-5">
                 {title && <h2 className="flex justify-center text-2xl md:text-3xl font-medium mb-4 text-center">{title}</h2>}
                 {subtitleArray

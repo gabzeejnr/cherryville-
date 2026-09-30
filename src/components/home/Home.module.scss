@@ -1,12 +1,26 @@
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: white;
     overflow: hidden;
-    background-color: var(--cherry);
-    background-image: radial-gradient(circle at 50% 35%, rgba(174, 21, 77, 0.65), rgba(58, 8, 26, 0.95) 75%, #1a0510 100%), radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
-    // background-size: 100% 100%, 34px 34px;
+    background-color: var(--accent-hover);
+    overflow: hidden;
+    background-image: radial-gradient(circle at 50% 50%, rgba(174, 21, 77, 0.65), rgba(58, 8, 26, 0.95) 75%, #1a0510 100%), radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
+    background-size: 100% 100%, 34px 34px;
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     height: 150%;
+    //     background-color: var(--accent);
+    //     width: 150%;
+    //     place-self: center;
+    //     border-radius: 40%;
+    //     bottom: -100%;
+    // }
+
 }
 
 .typing {
