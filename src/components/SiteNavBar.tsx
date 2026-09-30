@@ -96,12 +96,12 @@ export default function SiteNavBar() {
     return (
         <header className={`sticky top-0 z-100 flex items-center justify-between px-6 lg:px-8 ${isScrolled ? "py-3" : "py-4"} bg-white border-b border-gray-100 transition-all duration-200`}>
             <NavLink to="/" className="flex items-center gap-2 shrink-0">
-                <div className="flex items-center justify-center overflow-hidden rounded-md bg-[#D4F870] w-7 h-7">
-                    <img src={image} />
+                <div className="flex items-center justify-center overflow-hidden rounded-md w-10 h-10">
+                    <img src={image} className="scale-150 translate-y-1.5" />
                 </div>
                 <span className="flex flex-col gap-px text-lg font-extrabold tracking-tight text-slate-800">
                     CherryVille
-                    <span className="text-accent text-xs">Limited</span>
+                    <span className="text-accent text-xs -mt-1">Limited</span>
                 </span>
             </NavLink>
 
