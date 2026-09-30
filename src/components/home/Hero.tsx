@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
+import type { Dispatch, SetStateAction } from "react";
 import styles from "./Home.module.scss";
 
-function MainHero({ setIsOpen }) {
+function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (
         <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/40 bg-[#3a081a]/60 backdrop-blur-sm text-[#f4a8c4] text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
@@ -53,10 +54,10 @@ function Stats() {
     )
 }
 
-export default function Hero({ setIsOpen }) {
+export default function Hero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (
         <section className={styles.hero}>
-            <div className="flex flex-col min-h-screen 2xl py-10 2xl:justify-center-safe">
+            <div className="flex flex-col h-screen max-h-250 2xl py-10 2xl:justify-center-safe">
                 <MainHero setIsOpen={setIsOpen} />
                 <div className="mt-auto 2xl:mt-0">
                     <Stats />
