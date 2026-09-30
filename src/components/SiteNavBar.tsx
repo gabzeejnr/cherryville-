@@ -138,7 +138,7 @@ export default function SiteNavBar() {
             {menuOpen && <DropDown setMenuOpen={setMenuOpen} />}
 
             <div className="flex items-center justify-center gap-3">
-                <Link to="/contact" className={` items-center justify-center px-4 ${isScrolled ? "py-1.75" : "py-2"} rounded-full bg-accent hover:bg-brand-hover text-slate-900 text-sm font-semibold transition-all duration-300 shadow-sm whitespace-nowrap`}>
+                <Link to="/contact" className={` items-center hidden sm:flex justify-center px-4 ${isScrolled ? "py-1.75" : "py-2"} rounded-full bg-accent hover:bg-brand-hover text-slate-900 text-sm font-semibold transition-all duration-300 shadow-sm whitespace-nowrap`}>
                     Get Started
                 </Link>
 
