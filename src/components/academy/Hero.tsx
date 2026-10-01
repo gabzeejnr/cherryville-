@@ -10,7 +10,7 @@ export default function Hero({ level, subtitle }: {
                 <div className="flex flex-col min-h-[50dvh] py-10 justify-center items-center">
 
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6b9d88]/40 bg-[#163833]/60 backdrop-blur-sm text-[#a5e076] text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#d4f870] inline-block" />
+                        <span className="w-1.5 h-1.5 rounded-full cherry inline-block" />
                         <span className={`${styles.typing}`}>{level.toUpperCase()}'S ACADEMY</span>
                     </div>
 

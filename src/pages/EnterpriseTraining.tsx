@@ -1,27 +1,27 @@
 import { useState } from "react";
-import {useDocumentMeta} from "../hooks";
-import Closing from "../components/enterprise-training/Closing";
-import DeliveryFormat from "../components/enterprise-training/DeliveryFormat";
-import DeliveryStandard from "../components/enterprise-training/DeliveryStandard";
-import Hero from "../components/enterprise-training/Hero";
+import { useDocumentMeta, useSectionId } from "../hooks";
+import { pageMeta, subtitle, heading } from "../data";
+import Hero from "../components/Hero";
 import Introduction from "../components/enterprise-training/Intorduction";
 import ServiceLines from "../components/enterprise-training/ServiceLines";
+import DeliveryStandard from "../components/enterprise-training/DeliveryStandard";
+import DeliveryFormat from "../components/enterprise-training/DeliveryFormat";
+import Closing from "../components/enterprise-training/Closing";
 import RequestAProposal from "../components/forms/RequestAProposal";
-import useSectionId from "../hooks/useSectionId.hook";
+import { RequestAProposalButton } from "../components/Buttons";
 
 export default function EnterpriseTraining() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    useDocumentMeta({
-        title: "Corporate Technical Training in Nigeria",
-        description: "Cohort-based technical training, custom curriculum design, capability assessment and white-label delivery for organisations across Nigeria."
-    })
+    useDocumentMeta(pageMeta)
     useSectionId()
 
     return (
         <>
-            <Hero setIsOpen={setIsOpen} />
+            <Hero subtitles={subtitle} page="Enterprise Training" heading={heading}>
+                <RequestAProposalButton setIsOpen={setIsOpen} arrow />
+            </Hero>
             <Introduction />
             <ServiceLines />
             <DeliveryStandard />

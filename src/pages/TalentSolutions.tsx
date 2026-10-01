@@ -1,28 +1,27 @@
 import { useState } from "react";
-import { useDocumentMeta } from "../hooks";
-import { useGoToTopOnLoad } from "../hooks/load.hook";
-import Hero from "../components/talent-solutions/Hero";
+import { useDocumentMeta, useGoToTopOnLoad, useSectionId } from "../hooks";
+import { pageMeta, subtitles, heading } from "../data/talentSolutions.data";
+import { RequestAProposalButton } from "../components/Buttons";
+import Hero from "../components/Hero";
 import Positioning from "../components/talent-solutions/Positioning";
 import ServiceLines from "../components/talent-solutions/ServiceLines";
 import Engagement from "../components/talent-solutions/Engagement";
 import RequestAProposal from "../components/forms/RequestAProposal";
 import CTA from "../components/talent-solutions/CTA";
-import UseSectionId from "../hooks/useSectionId.hook";
 
 export default function TalentSolutions() {
 
     const [isOpen, setIsOpen] = useState(false)
 
-    useDocumentMeta({
-        title: "Tech Talent Solutions & Staff Augmentation in Nigeria",
-        description: "Embedded technical specialists, trained-to-specification talent, and project delivery teams for organisations across Nigeria."
-    })
+    useDocumentMeta(pageMeta)
     useGoToTopOnLoad("talent-solutions");
-    UseSectionId();
+    useSectionId();
 
     return (
         <>
-            <Hero setIsOpen={setIsOpen} />
+            <Hero page="Talent Solutions" subtitles={subtitles} heading={heading} >
+                <RequestAProposalButton setIsOpen={setIsOpen} arrow />
+            </Hero>
             <Positioning />
             <ServiceLines />
             <Engagement />

@@ -1,18 +1,16 @@
-import {useDocumentMeta} from "../hooks";
-import Hero from "../components/about/Hero";
+import { useDocumentMeta } from "../hooks";
+import Hero from "../components/Hero";
+import { heading, subtitles, pageMeta } from "../data/about.data";
 import HowWeAewStructured from "../components/about/HowWeAreStructured";
 import Founder from "../components/about/Founder";
 
 export default function About() {
 
-    useDocumentMeta({
-        title: "About Cherryville Limited | Tech Training & Talent, Lagos ",
-        description: "Cherryville Limited is a Lagos-based education technology and capacity development company delivering technical training and talent solutions across Nigeria."
-    })
+    useDocumentMeta(pageMeta)
 
     return (
         <>
-            <Hero />
+            <Hero page="About" heading={heading} subtitles={subtitles} />
             <HowWeAewStructured />
             <Founder />
         </>

@@ -13,12 +13,12 @@ const socials: Social[] = [
     {
         id: "email",
         icon: faEnvelope,
-        link: "mailto:gabrieldodowei@gmail.com"
+        link: "mailto:cherryvilletech@gmail.com"
     },
     {
         id: "linkedIn",
         icon: faLinkedin,
-        link: "https://I_dont_know_linkedin_url.com"
+        link: "https://linkedin.com/company/cherryville-limited"
     },
     {
         id: "x",

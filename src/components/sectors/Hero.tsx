@@ -1,4 +1,4 @@
-import styles from "./Sectors.module.scss";
+import styles from "../../styles/global.module.scss";
 
 function HighlightText({ text, highlights }: { text: string, highlights: string[] }) {
     

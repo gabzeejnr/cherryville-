@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import { addDot } from "../utils";
-
-type DocumentMeta = {
-    title: string,
-    description: string
-}
+import type { DocumentMeta } from "../types";
 
 
 function useDocumentMeta({ title, description }: DocumentMeta) {

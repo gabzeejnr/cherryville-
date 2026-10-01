@@ -1,5 +1,5 @@
 .hero {
- position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,6 +9,18 @@
     overflow: hidden;
     background-image: radial-gradient(circle at 50% 50%, rgba(174, 21, 77, 0.65), rgba(58, 8, 26, 0.95) 75%, #1a0510 100%), radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
     background-size: 100% 100%, 34px 34px;
+    // clip-path: polygon(0% 40%, 5% 50%, 5% 50%, 0% 60%);
+    animation: slideIn 700ms cubic-bezier(0.65, 0, 0.35, 1) both;
+
+    @keyframes slideIn {
+        from {
+            clip-path: circle(20px at 50% 50%);
+        }
+
+        to {
+            clip-path: circle(100%);
+        }
+    }
 }
 
 .close-modal {

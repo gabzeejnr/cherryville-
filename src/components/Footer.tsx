@@ -8,7 +8,7 @@ import { image } from "../data";
 function SocialLink({ social }: { social: Social }) {
     return (
         <a href={social.link} target="_blank">
-            <div className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white hover:text-accent hover:border-accent transition">
+            <div className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white hover:text-cherry hover:border-accent transition">
                 <FontAwesomeIcon icon={social.icon} />
             </div>
         </a>
@@ -64,7 +64,7 @@ export default function Footer() {
             </div>
 
             <div className="md:mx-10 md:px-5 lg:mx-30 pb-5 md:pb-10 border-t border-white/10 mt-14 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="text-xs text-gray-500">© 2026 Cherryville Limited. All rights reserved.</p>
+                <p className="text-xs text-gray-500">&copy; 2026 Cherryville Limited. All rights reserved.</p>
                 <div className="flex items-center gap-6 text-xs text-gray-400">
                     <Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link>
                     <Link to="/terms" className="hover:text-white transition">Terms of Service</Link>

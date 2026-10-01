@@ -1,4 +1,16 @@
-import type { FourSteps, ServiceLines } from "../types/talentSolutions.types"
+import type { FourSteps, ServiceLines } from "../types/talentSolutions.types";
+import type { DocumentMeta, Heading } from "../types";
+
+const subtitles = "When the capability you need is not on your payroll and the market cannot supply it fast enough, we build it or we bring it."
+
+const pageMeta: DocumentMeta = {
+    title: "Tech Talent Solutions & Staff Augmentation in Nigeria",
+    description: "Embedded technical specialists, trained-to-specification talent, and project delivery teams for organisations across Nigeria."
+};
+const heading: Heading = {
+    title: "Skilled Technical People, Supplied to your Satisfaction",
+    highlights: ["skilled", "technical", "satisfaction"]
+}
 
 const serviceLines: ServiceLines[] = [
     {
@@ -37,4 +49,4 @@ const fourSteps: FourSteps[] = [
     }
 ]
 
-export { serviceLines, fourSteps }
+export { pageMeta, subtitles, heading, serviceLines, fourSteps }

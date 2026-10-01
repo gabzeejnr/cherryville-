@@ -1,7 +1,17 @@
-import type { ServiceLines } from "../types/enterprise.types";
+import type { ServiceLines, DocumentMeta, Heading } from "../types";
 
+const pageMeta: DocumentMeta = {
+    title: "Corporate Technical Training in Nigeria",
+    description: "Cohort-based technical training, custom curriculum design, capability assessment and white-label delivery for organisations across Nigeria."
+};
 
-const serviceLines: ServiceLines[] = [
+const subtitle = "We design and deliver technical programmes for workforces that need to do more with the systems and data they already own and we prove what changed.";
+const heading:Heading = {
+    title: "Training your Organisation can Measure",
+    highlights: ["training", "organisation", "measure"]
+}
+
+const serviceLines: readonly ServiceLines[] = [
     {
         id: "technical-capability-development",
         title: "Technical Capability Development",
@@ -22,9 +32,9 @@ const serviceLines: ServiceLines[] = [
         title: "Partner & White - Label Delivery",
         text: "A delivery aim for consultancies and contractors who have won the work and need the training capability behind it. We deliver under your brand, to your standards, under full confidentiality. Your client relationship remains entirely yours."
     }
-] as const
+]
 
-const deliveryStandard: { title: string, text: string[] }[] = [
+const deliveryStandard: readonly { title: string, text: string[] }[] = [
     {
         title: "Definition",
         text: ["We establish the capability gap, agree measurable objectives with your sponsors and design the curriculum and assessment instruments against them."]
@@ -40,7 +50,7 @@ const deliveryStandard: { title: string, text: string[] }[] = [
             "Assessment runs on a standard instrument set applied at three points; before, midway and at the end, so the gain we report is a comparison, not an impression. "
         ] as const
     }
-] as const;
+]
 
 const deliveryFormat: { title: string, text: string }[] = [
     {
@@ -61,4 +71,4 @@ const deliveryFormat: { title: string, text: string }[] = [
     }
 ]
 
-export { serviceLines, deliveryStandard, deliveryFormat }
+export { pageMeta, subtitle, heading, serviceLines, deliveryStandard, deliveryFormat }

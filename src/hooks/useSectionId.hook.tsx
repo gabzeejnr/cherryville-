@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 
-export default function useSectionId() {
+export default function useSectionId(): void {
     useEffect(() => {
         const id = window.location.hash.slice(1);
 
@@ -12,3 +12,5 @@ export default function useSectionId() {
         }
     }, []);
 }
+
+export { useSectionId }

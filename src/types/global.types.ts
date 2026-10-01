@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 
 
@@ -25,5 +26,13 @@ type Social = {
     link: string
 }
 
+type Heading = { title: string, highlights?: string[] }
+type HeroType = {
+    page: string,
+    heading: Heading,
+    subtitles: string | string[],
+    children?: ReactNode
+}
 
-export type { Navlink, FootLink, Social }
+
+export type { Navlink, FootLink, Social, Heading, HeroType }
