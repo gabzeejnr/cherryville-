@@ -14,7 +14,7 @@ export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
 
     useDocumentMeta({
-        title: "Cherryville Limited | Corporate Tech Training & Talent Solutions in Nigeria",
+        title: "Corporate Tech Training & Talent Solutions in Nigeria",
         description: "Technical training and skilled tech talent for organisations in oil and gas, banking, government and the development sector. Delivered by Microsoft Certified Trainers."
     })
     useGoToTopOnLoad("");

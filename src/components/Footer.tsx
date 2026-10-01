@@ -44,8 +44,8 @@ export default function Footer() {
             <div className="flex flex-col gap-10 md:gap-15 lg:gap-20 md:flex-row md:items-center lg:justify-center-safe mx-auto px-6 lg:px-12 py-16">
                 <div>
                     <div className="flex items-center gap-2.5 mb-4">
-                        <div className="w-8 h-8 rounded-md overflow-hidden flex items-center justify-center">
-                            <img src={image} />
+                        <div className="w-10 h-10 bg-cherry rounded-md overflow-hidden flex items-center justify-center">
+                            <img src={image} className="h-full w-full object-contain" />
                         </div>
                         <span className="flex flex-col text-lg font-extrabold tracking-tight text-white">
                             CherryVille
