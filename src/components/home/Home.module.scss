@@ -5,21 +5,17 @@
     justify-content: space-between;
     color: white;
     overflow: hidden;
-    background-color: var(--accent-hover);
     overflow: hidden;
-    background-image: radial-gradient(circle at 50% 50%, rgba(174, 21, 77, 0.65), rgba(58, 8, 26, 0.95) 75%, #1a0510 100%), radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
-    background-size: 100% 100%, 34px 34px;
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     height: 150%;
-    //     background-color: var(--accent);
-    //     width: 150%;
-    //     place-self: center;
-    //     border-radius: 40%;
-    //     bottom: -100%;
-    // }
+    background: url("../../assets/images/home/main-hero-bg2.jpg") center /cover no-repeat;
+    
+    &::after{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+    }
 
 }
 
