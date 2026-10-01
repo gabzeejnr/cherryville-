@@ -23,7 +23,7 @@ export default function AcademyTeaser() {
                 <div className="rounded-4xl overflow-hidden"
                     data-aos="slide-left">
                     <div className="overflow-hidden bg-white p-4">
-                        <img src={classroom} alt="Teaching" className="rounded-4xl" />
+                        <img src={classroom} alt="Teaching" loading="eager" className="rounded-4xl" />
                     </div>
                 </div>
             </div>

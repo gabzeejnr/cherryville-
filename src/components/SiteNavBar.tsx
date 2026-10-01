@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import { NAV_LINKS, image } from "../data";
+import { NAV_LINKS, brandName, image } from "../data";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "./FootNav.module.scss";
 
@@ -96,8 +96,8 @@ export default function SiteNavBar() {
     return (
         <header className={`sticky top-0 z-100 flex items-center justify-between md:justify-around px-6 lg:px-8 ${isScrolled ? "py-3" : "py-4"} bg-white border-b border-gray-100 transition-all duration-200`}>
             <NavLink to="/" className="flex items-center gap-2 shrink-0">
-                <div className="flex items-center justify-center overflow-hidden rounded-md w-10 h-10">
-                    <img src={image} className="scale-150 translate-y-1.5" />
+                <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-md">
+                    <img src={image} alt={brandName} className="h-full w-full object-contain" />
                 </div>
                 <span className="flex flex-col gap-px text-lg font-extrabold tracking-tight text-slate-800">
                     CherryVille
