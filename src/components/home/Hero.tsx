@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "./Home.module.scss";
 
@@ -26,7 +27,7 @@ function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> 
                 <button type="button"
                     onClick={() => setIsOpen(p => !p)} className={styles.primaryButton}>
                     <span>Request a Proposal</span>
-                    <ArrowRight size={18} />
+                    <FontAwesomeIcon icon={faArrowRight} />
                 </button>
 
                 <button type="button" className={styles.secondaryButton}>

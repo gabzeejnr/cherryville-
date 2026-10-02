@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { doings } from "../../data";
-import { ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import type { Doings } from "../../types";
 import styles from "./Home.module.scss";
 
@@ -26,7 +27,7 @@ function Card({ doing }: { doing: Doings }) {
                     "--link-color": bgColor
                 } as React.CSSProperties}>
                     {link.text}
-                    <ArrowRight size={17} />
+                    <FontAwesomeIcon icon={faArrowRight} />
                 </Link>
             </div>
         </div>

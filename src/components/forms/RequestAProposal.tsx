@@ -1,4 +1,5 @@
-import { X } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import type { Dispatch, SetStateAction } from "react";
 import styles from "../../styles/global.module.scss";
 
@@ -54,7 +55,7 @@ export default function RequestAProposal({ setIsOpen }: { setIsOpen: Dispatch<Se
                         <div className="flex items-center justify-between">
                             Request a Proposal
                             <button type="button" className="mr-1 cursor-pointer" onClick={() => setIsOpen(false)}>
-                                <X />
+                                <FontAwesomeIcon icon={faX} />
                             </button>
                         </div>
                     </h2>
