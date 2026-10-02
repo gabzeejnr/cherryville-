@@ -23,15 +23,17 @@ function Card({ sector }: { sector: Serve }) {
 
 export default function SectorsWeServe() {
     return (
-        <Section className="px-3 md:px-5 py-20" title="We Work Where Technical Capabilities Carry Weight"
-            subtitle="Different sectors buy training for different reasons. We build the programme around yours.">
-            <div className={styles.sectorGrid}>
-                {sectorsServed.map((sector, i) => (
-                    <div data-aos="slide-right" data-aos-delay={i * 300} key={sector.text}>
-                        <Card sector={sector} />
-                    </div>
-                ))}
-            </div>
-        </Section>
+        <div className={styles.sectorsSection}>
+            <Section className="px-3 md:px-5 py-20" bg={null} title="We Work Where Technical Capabilities Carry Weight"
+                subtitle="Different sectors buy training for different reasons. We build the programme around yours.">
+                <div className={styles.sectorGrid}>
+                    {sectorsServed.map((sector, i) => (
+                        <div data-aos="slide-right" data-aos-delay={i * 300} key={sector.text}>
+                            <Card sector={sector} />
+                        </div>
+                    ))}
+                </div>
+            </Section>
+        </div>
     );
 }

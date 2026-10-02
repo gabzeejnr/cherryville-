@@ -334,6 +334,20 @@
     }
 }
 
+.sectorsSection {
+    position: relative;
+    background: url("../../assets/images/home/sectors-bg.jpg") center / cover no-repeat;
+    isolation: isolate;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.6);
+    }
+}
+
 
 .sectorGrid {
     margin-top: 3.75rem;
