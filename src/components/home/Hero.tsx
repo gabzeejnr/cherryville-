@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import type { Dispatch, SetStateAction } from "react";
@@ -39,6 +40,7 @@ function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> 
 }
 
 function Stats() {
+
     const METRICS = [
         { value: "1K+", label: "Individuals Trained" },
         { value: "20+", label: "Technology Courses" },
@@ -50,7 +52,7 @@ function Stats() {
         <div className={styles.stats}>
             {METRICS.map(metric => (
                 <div key={metric.label} className={styles.stat}>
-                    <span className={styles.statValue}>{metric.value}</span>
+                    <span className={`${styles.statValue} count`}>{metric.value}</span>
 
                     <span className={styles.statLabel}>{metric.label}</span>
                 </div>

@@ -333,3 +333,70 @@
         }
     }
 }
+
+
+.sectorGrid {
+    margin-top: 3.75rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 640px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.sectorCard {
+    min-height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: white;
+    color: var(--heading);
+    border: 1px solid rgba(174, 21, 77, 0.1);
+    border-radius: 1rem;
+
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: rgba(174, 21, 77, 0.25);
+        box-shadow: 0 14px 30px rgba(104, 10, 48, 0.1);
+    }
+
+    .sectorIcon {
+        width: 2.75rem;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+    }
+
+    .sectorText {
+        margin: 0;
+
+        font-size: 0.9rem;
+        line-height: 1.7;
+
+        color: #5f5155;
+
+        span {
+            color: var(--heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+    }
+}
