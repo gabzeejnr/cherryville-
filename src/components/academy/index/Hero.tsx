@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react"
-import styles from "../../../styles/global.module.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
+import styles from "../../../styles/global.module.scss";
 
 export default function Hero() {
     return (
@@ -17,7 +18,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row mt-5 items-center gap-4 w-full sm:w-auto">
                         <button type="button"
                             className="bg-accent px-4 inline-flex items-center justify-center gap-2 py-3 rounded-full cursor-pointer w-full">
-                            <span className="min-w-fit">Help me Choose</span><ArrowRight size="20" />
+                            <span className="min-w-fit">Help me Choose</span><FontAwesomeIcon icon={faArrowRight} />
                         </button>
                         <button type="button"
                             className="bg-heading-secondary px-4 inline-flex items-center justify-center gap-3 py-3 rounded-full cursor-pointer w-full">Browse All Courses</button>

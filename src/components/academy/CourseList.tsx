@@ -2,7 +2,8 @@ import { useState } from "react";
 import Section from "../Section";
 import AcademyEnrollment from "../forms/AcademyEnrollment";
 import { addDot } from "../../utils";
-import { Plus } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import type { Dispatch, SetStateAction } from "react";
 import type { Course } from "../../types";
 
@@ -21,14 +22,14 @@ function Card({ course, setEnroll }: { course: Course, setEnroll: Dispatch<SetSt
                     <span>{name}</span>
                     <button type="button" onClick={() => setOpen(p => !p)}
                         className="hover:rotate-360"
-                    ><Plus /></button>
+                    ><FontAwesomeIcon icon={faPlus} /></button>
                 </div>
                 : <div className="flex flex-col gap-2 shadow-md p-3 transition-all duration-[5s] shadow-accent-hover rounded-xl bg-accent ">
                     <div className="flex justify-between">
                         <span>{name}</span>
                         <button type="button" onClick={() => setOpen(p => !p)}
                             className="rotate-45 hover:rotate-360"
-                        ><Plus /></button>
+                        ><FontAwesomeIcon icon={faPlus} /></button>
                     </div>
                     <div className="flex flex-col mt-2 md:mt-3">
                         <h3 className="font-bold">Who is it for?</h3>
