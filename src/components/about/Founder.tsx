@@ -7,9 +7,7 @@ export default function Founder() {
             <div className="flex flex-col items-center justify-center lg:flex-row gap-10 lg:px-20">
                 <div>
                     <div className="rounded-2xl w-fit overflow-hidden flex items-center justify-center">
-                        <img src={founder} alt="Gabriel Osho Profile" height={30}
-                            /* className="w-full" */
-                        />
+                        <img src={founder} alt="Gabriel Osho Profile" height={30} />
                     </div>
                 </div>
                 <div className="flex-1" data-aos="fade-up">

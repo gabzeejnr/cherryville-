@@ -25,12 +25,12 @@ function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> 
 
             <div className={styles.actions}>
                 <button type="button"
-                    onClick={() => setIsOpen(p => !p)} className={styles.primaryButton}>
+                    onClick={() => setIsOpen(p => !p)} className="accent-button">
                     <span>Request a Proposal</span>
                     <FontAwesomeIcon icon={faArrowRight} />
                 </button>
 
-                <button type="button" className={styles.secondaryButton}>
+                <button type="button" className="outline-button text-white">
                     Explore Our Services
                 </button>
             </div>
