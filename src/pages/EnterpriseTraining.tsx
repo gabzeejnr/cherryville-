@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDocumentMeta, useSectionId } from "../hooks";
 import { pageMeta, subtitle, heading } from "../data";
 import Hero from "../components/Hero";
+import backgroundImage from "../assets/images/heroes/enterpriseBackground.jpg";
 import Introduction from "../components/enterprise-training/Intorduction";
 import ServiceLines from "../components/enterprise-training/ServiceLines";
 import DeliveryStandard from "../components/enterprise-training/DeliveryStandard";
@@ -19,7 +20,7 @@ export default function EnterpriseTraining() {
 
     return (
         <>
-            <Hero subtitles={subtitle} page="Enterprise Training" heading={heading}>
+            <Hero subtitles={subtitle} page="Enterprise Training" heading={heading} backgroundImage={backgroundImage}>
                 <RequestAProposalButton setIsOpen={setIsOpen} arrow />
             </Hero>
             <Introduction />

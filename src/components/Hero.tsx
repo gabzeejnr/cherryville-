@@ -25,13 +25,16 @@ export default function Hero({ page, heading, subtitles, children, backgroundIma
     if (!page || !heading.title) return <></>
 
     return (
-        <section className={styles.hero} /* style={backgroundImage
-            ? { backgroundImage: `url(${backgroundImage})` } : undefined
-        } */>
-            <div className={styles.background} style={
-                backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined
-            } />
-            <div className={styles.overlay} />
+        <section className={backgroundImage ? styles.hero : styles.backupHero}>
+            {backgroundImage
+                ? <>
+                    <div className={styles.background} style={
+                        backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined
+                    } />
+                    <div className={styles.overlay} />
+                </>
+                : null
+            }
 
             <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
 
