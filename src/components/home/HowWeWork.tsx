@@ -80,7 +80,7 @@ export default function HowWeWork() {
                     <Link to={{
                         pathname: "/enterprise-training",
                         hash: "#delivery-standard",
-                    }} className="accent-button">
+                    }} className="accent-button" data-aos="flip-left">
                         See how we deliver
                         <span aria-hidden="true">→</span>
                     </Link>

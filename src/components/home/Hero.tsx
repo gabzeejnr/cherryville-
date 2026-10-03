@@ -5,7 +5,7 @@ import styles from "./Home.module.scss";
 
 function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (
-        <main className={styles.main}>
+        <main className={styles.main} data-aos="fade-up">
             <span className={styles.eyebrow}>
                 Enterprise Capability & Talent
             </span>
