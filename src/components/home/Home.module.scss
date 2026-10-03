@@ -84,6 +84,7 @@
 
                     strong {
                         font-weight: inherit;
+                        color: var(--accent);
                     }
                 }
 
@@ -172,48 +173,6 @@
 
     @media (min-width: 1280px) {
         margin-inline: 6rem;
-    }
-}
-
-.stat {
-    padding: 1.25rem 0.75rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    &:not(:nth-child(-n + 2)) {
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    @media (min-width: 768px) {
-        padding: 1.5rem 0;
-
-        &:not(:nth-child(-n + 2)) {
-            border-top: 0;
-        }
-
-        &:not(:last-child) {
-            border-right: 1px solid rgba(255, 255, 255, 0.08);
-        }
-    }
-}
-
-.statValue {
-    font-size: clamp(1.8rem, 3vw, 3rem);
-    line-height: 1;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-}
-
-.statLabel {
-    margin-top: 0.5rem;
-
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.48);
-
-    @media (min-width: 640px) {
-        font-size: 0.8rem;
     }
 }
 

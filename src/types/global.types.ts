@@ -31,6 +31,7 @@ type HeroType = {
     page: string,
     heading: Heading,
     subtitles: string | string[],
+    backgroundImage?: string,
     children?: ReactNode
 }
 

@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons/faArrowRight";
 import type { Dispatch, SetStateAction } from "react";
 
-export function RequestAProposalButton({ setIsOpen, arrow }: {
+export function RequestAProposalButton({ setIsOpen, arrow, className }: {
     setIsOpen: Dispatch<SetStateAction<boolean>>,
-    arrow?: true
+    arrow?: true,
+    className?: string
 }) {
     return (
         <button type="button" onClick={() => setIsOpen(p => !p)} data-aos="flip-right"
-            className="bg-accent hover:bg-accent-hover cursor-pointer px-3 py-2 rounded-full text-white font-medium"
+            className={`accent-button cursor-pointer ${className}`}
         >Request a Proposal {arrow && <FontAwesomeIcon icon={faArrowRight} />}</button>
     )
 }

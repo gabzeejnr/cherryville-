@@ -1,4 +1,4 @@
-import React from "react";
+import { AccentButton } from "../Buttons";
 
 /**
  * ContactFormSection — "Send us a Message"
@@ -131,7 +131,7 @@ export default function ContactFormSection() {
             />
           </div>
 
-          <button
+          <AccentButton
             className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-white transition"
             style={{ backgroundColor: "#0f2e2a" }}
           >
@@ -139,7 +139,7 @@ export default function ContactFormSection() {
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             Send Message
-          </button>
+          </AccentButton>
         </div>
 
         {/* Right: contact info sidebar */}

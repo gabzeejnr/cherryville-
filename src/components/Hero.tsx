@@ -20,22 +20,29 @@ function HighlightText({ heading }: { heading: Heading }) {
 
 }
 
-export default function Hero({ page, heading, subtitles, children }: HeroType) {
+export default function Hero({ page, heading, subtitles, children, backgroundImage }: HeroType) {
 
     if (!page || !heading.title) return <></>
 
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} /* style={backgroundImage
+            ? { backgroundImage: `url(${backgroundImage})` } : undefined
+        } */>
+            <div className={styles.background} style={
+                backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined
+            } />
+            <div className={styles.overlay} />
+
             <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
 
                 <div className="flex flex-col min-h-[50dvh] py-10 justify-center items-center">
 
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cherry/40 bg-[#163833]/60 backdrop-blur-sm text-cherry text-[10px] sm:text-xs font-semibold uppercase tracking-widest mb-10 shadow-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cherry animate-bounce inline-block" />
-                        <span className={`${styles.typing}`}>{page}</span>
+                    <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/6 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-cherry backdrop-blur-md sm:text-xs">
+                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-cherry" />
+                        <span className={styles.typing}>{page}</span>
                     </div>
 
-                    <h1 className="leading-10 lg:leading-15 font-bold text-3xl">
+                    <h1 className="max-w-4xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
                         <HighlightText heading={heading} />
                     </h1>
 

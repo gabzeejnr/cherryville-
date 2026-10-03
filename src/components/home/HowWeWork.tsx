@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section from "../Section";
-import imageCover from "../../assets/images/home/main-hero-bg.jpg";
+import imageCover from "../../assets/images/home/method-image.jpg";
 import styles from "./Home.module.scss";
 
 const phases = [

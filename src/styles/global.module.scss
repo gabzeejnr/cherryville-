@@ -1,26 +1,26 @@
 .hero {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    min-height: 520px;
+    overflow: hidden;
     color: white;
-    overflow: hidden;
-    background-color: var(--accent-hover);
-    overflow: hidden;
-    background-image: radial-gradient(circle at 50% 50%, rgba(174, 21, 77, 0.65), rgba(58, 8, 26, 0.95) 75%, #1a0510 100%), radial-gradient(rgba(255, 255, 255, 0.12) 1.2px, transparent 1.2px);
-    background-size: 100% 100%, 34px 34px;
-    // clip-path: polygon(0% 40%, 5% 50%, 5% 50%, 0% 60%);
-    animation: slideIn 700ms cubic-bezier(0.65, 0, 0.35, 1) both;
+}
 
-    @keyframes slideIn {
-        from {
-            clip-path: circle(20px at 50% 50%);
-        }
+.background {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.02);
+}
 
-        to {
-            clip-path: circle(100%);
-        }
-    }
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(38, 4, 20, 0.65) 0%,
+            rgba(38, 4, 20, 0.54) 45%,
+            rgba(38, 4, 20, 0.43) 100%);
 }
 
 .close-modal {
