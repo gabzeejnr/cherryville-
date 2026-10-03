@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="flex flex-col min-h-[50dvh] py-10 justify-center-safe">
                 <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-4 pb-14 text-center max-w-6xl mx-auto">
                     <h1 className="leading-10 lg:leading-15 font-bold text-3xl">
-                        <span className="text-[#d4f870]">Start</span> where <span className="text-[#d4f870]">you are. Train</span> for a <span className="text-[#d4f870]">job you can</span> name.
+                        <span className="text-accent">Start</span> where <span className="text-accent">you are. Train</span> for a <span className="text-accent">job you can</span> name.
                     </h1>
 
                     <p className="text-base sm:text-lg text-gray-300/90 font-normal max-w-2xl mx-auto mb-10 leading-relaxed">

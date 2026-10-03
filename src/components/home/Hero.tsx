@@ -38,28 +38,6 @@ function MainHero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> 
     );
 }
 
-function Stats() {
-
-    const METRICS = [
-        { value: "1K+", label: "Individuals Trained" },
-        { value: "20+", label: "Technology Courses" },
-        { value: "80+", label: "Learning Experiences" },
-        { value: "100+", label: "Training Experts" },
-    ];
-
-    return (
-        <div className={styles.stats}>
-            {METRICS.map(metric => (
-                <div key={metric.label} className={styles.stat}>
-                    <span className={`${styles.statValue} count`}>{metric.value}</span>
-
-                    <span className={styles.statLabel}>{metric.label}</span>
-                </div>
-            ))}
-        </div>
-    );
-}
-
 export default function Hero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }) {
     return (
         <section className={styles.hero}>
@@ -67,7 +45,6 @@ export default function Hero({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction
                 <div className={styles.content}>
                     <MainHero setIsOpen={setIsOpen} />
                 </div>
-                <Stats />
             </div>
         </section>
     );

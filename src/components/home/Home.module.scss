@@ -351,7 +351,6 @@
 
 .sectorGrid {
     margin-top: 3.75rem;
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -377,7 +376,7 @@
     justify-content: center;
     gap: 1.25rem;
     padding: 1.5rem;
-    background: white;
+    background: var(--cherry);
     color: var(--heading);
     border: 1px solid rgba(174, 21, 77, 0.1);
     border-radius: 1rem;
@@ -397,6 +396,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 0.75rem;
+        background: var(--accent);
     }
 
     .sectorText {
