@@ -1,14 +1,14 @@
 import Section from "../Section";
-import imageStuff from "../../assets/images/home/main-hero-bg1.jpg";
+import founder from "../../assets/images/about/founder.jpeg";
 
 export default function Founder() {
     return (
         <Section bg="bg-cherry">
-            <div className="flex flex-col items-center lg:flex-row">
-                <div className="flex-1">
-                    <div className="max-w-150 flex items-center justify-center">
-                        <img src={imageStuff} alt="Gabriel Osho Profile"
-                            className="w-full"
+            <div className="flex flex-col items-center justify-center lg:flex-row gap-10 lg:px-20">
+                <div>
+                    <div className="rounded-2xl w-fit overflow-hidden flex items-center justify-center">
+                        <img src={founder} alt="Gabriel Osho Profile" height={30}
+                            /* className="w-full" */
                         />
                     </div>
                 </div>
@@ -18,7 +18,7 @@ export default function Founder() {
                     <div className="mt-7 flex flex-col gap-5 text-sm lg:text-[17px]">
 
                         <p className="">
-                            Gabriel founded Cherryville after [X] years in programme management, training delivery and data analytics across Nigeria's technology and skills development sector. Before establishing the company he managed multiple concurrent training programmes, working across programme operations, data analysis and compliance.
+                            Gabriel founded Cherryville after 5 years in programme management, training delivery and data analytics across Nigeria's technology and skills development sector. Before establishing the company he managed multiple concurrent training programmes, working across programme operations, data analysis and compliance.
                         </p>
 
                         <p className="">
